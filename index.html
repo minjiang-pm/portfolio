@@ -714,49 +714,299 @@
     <!-- Clean & Refined Testimonials Section -->
 
     <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Product Toolkit</h2>
-                <p>How I think and operate as a product leader in the high-tech sustainability space</p>
+<!-- Replace both your skills section and approach section with this combined one -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>How I Work & What I Bring</h2>
+            <p>My approach combines technical expertise with hands-on execution to deliver real business results</p>
+        </div>
+        
+        <!-- Core Approach Cards -->
+        <div class="approach-grid">
+            <div class="approach-card main-card" data-aos="fade-up">
+                <div class="approach-icon">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <h3>Hands-On Builder</h3>
+                <p>I don't just strategize – I actively build, code, and execute. From demo dashboards to data analysis, I roll up my sleeves and deliver.</p>
+                <div class="skill-examples">
+                    <span>Python & SQL</span>
+                    <span>Dashboard Building</span>
+                    <span>Direct Implementation</span>
+                </div>
             </div>
             
+            <div class="approach-card main-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="approach-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Data-Driven Strategy</h3>
+                <p>I dive deep into customer data and usage metrics to inform product decisions and validate business outcomes.</p>
+                <div class="skill-examples">
+                    <span>PowerBI & Tableau</span>
+                    <span>Customer Analytics</span>
+                    <span>Market Analysis</span>
+                </div>
+            </div>
+            
+            <div class="approach-card main-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="approach-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Customer-Centric Leader</h3>
+                <p>I conduct extensive customer research and build strong stakeholder relationships to ensure products truly meet market needs.</p>
+                <div class="skill-examples">
+                    <span>58+ Customer Interviews</span>
+                    <span>Journey Mapping</span>
+                    <span>Stakeholder Management</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Skills Grid -->
+        <div class="detailed-skills">
+            <h3>Technical & Product Skills</h3>
             <div class="skills-grid">
                 <div class="skill-card" data-aos="fade-up">
                     <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="skill-name">Product Strategy</div>
-                    <div class="skill-description">Developing strategic roadmaps that align with business goals and customer needs to drive growth and innovation.</div>
-                    <div class="skill-meter">
-                        <div class="skill-level" style="width: 95%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="skill-name">Customer Research</div>
-                    <div class="skill-description">Conducting interviews and creating journey maps to identify pain points and opportunities for product improvement.</div>
+                    <div class="skill-name">Development & Analytics</div>
+                    <div class="skill-description">Python, SQL, R, PowerBI, Tableau, Looker, Advanced Excel, Data Visualization</div>
                     <div class="skill-meter">
                         <div class="skill-level" style="width: 90%;"></div>
                     </div>
                 </div>
                 
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="skill-name">Product Management</div>
+                    <div class="skill-description">Roadmap Planning, Feature Prioritization, A/B Testing, User Research, Go-to-Market Strategy</div>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
                 <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill-icon">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <div class="skill-name">Data Analysis</div>
-                    <div class="skill-description">Leveraging SQL, PowerBI, and other tools to analyze customer feedback and usage metrics for informed decisions.</div>
+                    <div class="skill-name">Sustainability Domain</div>
+                    <div class="skill-description">Environmental Compliance, ESG Reporting, Sustainability Software, EHS Systems</div>
                     <div class="skill-meter">
-                        <div class="skill-level" style="width: 85%;"></div>
+                        <div class="skill-level" style="width: 92%;"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+/* Combined Skills & Approach Section */
+.skills-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.approach-card.main-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-card.main-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(126, 34, 206, 0.05), transparent);
+    transition: left 0.5s ease;
+}
+
+.approach-card.main-card:hover::before {
+    left: 100%;
+}
+
+.approach-card.main-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(126, 34, 206, 0.15);
+}
+
+.approach-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.approach-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.approach-card.main-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.approach-card.main-card p {
+    color: var(--secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.skill-examples {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.skill-examples span {
+    background: linear-gradient(135deg, rgba(126, 34, 206, 0.1), rgba(168, 85, 247, 0.1));
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(126, 34, 206, 0.2);
+}
+
+/* Detailed Skills Section */
+.detailed-skills {
+    margin-top: 60px;
+}
+
+.detailed-skills h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: var(--dark);
+    position: relative;
+}
+
+.detailed-skills h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(126, 34, 206, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-icon i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.skill-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.skill-description {
+    color: var(--secondary);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.skill-meter {
+    height: 6px;
+    background-color: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .approach-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .approach-card.main-card {
+        padding: 25px;
+    }
+}
+</style>
     
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
