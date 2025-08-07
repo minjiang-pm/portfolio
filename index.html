@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Jiang | Product Leader</title>
-    <meta name="description" content="Min Jiang - Product Manager specializing in sustainability software solutions">
+    <title>Min Jiang | Product Leader - Final Portfolio</title>
+    <meta name="description" content="Min Jiang - Hands-on Product Leader | Environmental Engineer turned Product Manager specializing in sustainability solutions, data visualization (PowerBI, Tableau), and AI-assisted development">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -229,7 +229,6 @@
         
         .timeline-container {
             max-width: 1000px;
-/*             max-width: auto; */
             margin: 0 auto;
         }
         
@@ -271,66 +270,175 @@
             margin-bottom: 10px;
         }
         
-        /* Skills Grid */
-        .skills-section {
-            background-color: #f8fafc;
+        /* Streamlined Testimonials Section */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f3e8ff 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .skill-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding: 30px;
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--primary);
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(126, 34, 206, 0.1);
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(126, 34, 206, 0.02) 0%, transparent 70%);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
         }
         
-        .skill-icon i {
-            color: var(--primary);
-            font-size: 1.5rem;
+        /* Clean 4-Card Grid */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
         }
         
-        .skill-name {
-            font-size: 1.25rem;
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid transparent;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .ul-card {
+            border-top-color: #3b82f6;
+        }
+        
+        .locus-card {
+            border-top-color: #10b981;
+        }
+        
+        .card-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        
+        .company-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
         
-        .skill-meter {
-            height: 6px;
-            background-color: #e2e8f0;
-            border-radius: 3px;
-            overflow: hidden;
-            margin-top: 20px;
+        .company-badge.ul {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
         }
         
-        .skill-level {
-            height: 100%;
-            background-color: var(--primary);
+        .company-badge.locus {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
         }
         
-        /* Projects Section */
+        .testimonial-card h4 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .testimonial-quote {
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-quote p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .testimonial-quote strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .testimonial-quote cite {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, rgba(126, 34, 206, 0.08), rgba(168, 85, 247, 0.08));
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(126, 34, 206, 0.15);
+        }
+        
+        /* Impact Summary */
+        .impact-summary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        
+        .summary-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .impact-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            text-align: center;
+            min-width: 100px;
+        }
+        
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+        
+        /* Enhanced Projects Grid */
         .projects-section {
             background-color: white;
         }
@@ -343,19 +451,22 @@
         
         .project-card {
             background-color: #f8fafc;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            position: relative;
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         }
         
         .project-image {
-            height: 200px;
+            height: 220px;
             overflow: hidden;
+            position: relative;
         }
         
         .project-image img {
@@ -365,43 +476,133 @@
             transition: transform 0.5s ease;
         }
         
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
         .project-video {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
         
         .project-content {
-            padding: 25px;
+            padding: 30px;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
         }
         
         .project-tag {
             background-color: rgba(126, 34, 206, 0.1);
             color: var(--primary);
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 6px 12px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            margin-right: 10px;
+            font-weight: 600;
             display: inline-block;
-            margin-bottom: 15px;
+        }
+        
+        .project-tag.company {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        .project-tag.locus {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
         }
         
         .project-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+        
+        .project-description {
+            color: var(--secondary);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .project-metrics {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         
         .project-metric {
             display: flex;
             align-items: center;
-            margin-right: 20px;
-            margin-bottom: 10px;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
         }
         
-        .project-metric i {
-            color: var(--primary);
-            margin-right: 8px;
+        .learn-more-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px auto 0;
+            transition: all 0.3s ease;
+        }
+        
+        .learn-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 34, 206, 0.3);
+        }
+        
+        .learn-more-btn i {
+            transition: transform 0.3s ease;
+        }
+        
+        .learn-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+        
+        .project-details {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: rgba(126, 34, 206, 0.04);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .project-details p {
+            margin: 0;
+            color: var(--dark);
+            line-height: 1.5;
+        }
+        
+        /* Project card border styling */
+        .migration-card {
+            border-top: 4px solid #3b82f6;
+        }
+        
+        .research-card {
+            border-top: 4px solid var(--primary);
+        }
+        
+        .sustainability-card {
+            border-top: 4px solid #3b82f6;
+        }
+        
+        .compliance-card {
+            border-top: 4px solid #10b981;
         }
         
         /* Contact Section */
@@ -535,6 +736,25 @@
             animation: pulse 4s infinite;
         }
         
+        /* Mobile Timeline */
+        @media (max-width: 768px) {
+            .professional-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 50px;
+                margin-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-year {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
             .hero-content, .contact-container, .footer-content {
@@ -545,12 +765,17 @@
                 flex: 0 0 100%;
             }
             
-            .skills-grid, .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .projects-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
             
             .hero-text, .contact-info {
                 margin-bottom: 40px;
+            }
+            
+            .impact-metrics {
+                gap: 35px;
             }
         }
         
@@ -579,21 +804,41 @@
                 display: block;
             }
             
-            .skills-grid, .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .desktop-timeline {
-                display: none;
-            }
-            
-            .mobile-timeline {
-                display: block;
-            }
-            
             .hero-image img {
                 width: 200px;
                 height: 200px;
+            }
+            
+            .project-content {
+                padding: 25px;
+            }
+            
+            .project-image {
+                height: 180px;
+            }
+            
+            .testimonial-card {
+                padding: 25px;
+            }
+            
+            .testimonial-card h4 {
+                font-size: 1.1rem;
+            }
+            
+            .impact-summary {
+                padding: 30px 20px;
+            }
+            
+            .summary-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .metric-number {
+                font-size: 2rem;
+            }
+            
+            .impact-metrics {
+                gap: 25px;
             }
         }
     </style>
@@ -607,8 +852,6 @@
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#timeline">My Story</a></li>
-        
-                    <li><a href="#skills">How I work</a></li>
                     <li><a href="#testimonials">Impact</a></li>
                     <li><a href="#projects">Portfolio</a></li>
                     <li><a href="#contact" class="cta-button">Let's chat</a></li>
@@ -624,10 +867,8 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-<!--                 <h1>Bridging <span>Technical Expertise</span> & Product Innovation</h1> -->
-                 <h1>From Code to Strategy:<span>Building What Matters  </span></h1>
-
-                <p>From coding with AI to diving into data, I transform complex sustainability challenges into powerful digital solutions that don't just look good — they deliver real results. Environmental engineer turned hands-on product leader who builds, executes, and lead by example. </p>
+                <h1>From Code to Strategy:<span>Building What Matters</span></h1>
+                <p>From coding with AI to diving into data, I transform complex sustainability challenges into powerful digital solutions that don't just look good — they deliver real results. Environmental engineer turned hands-on product leader who builds, executes, and leads by example.</p>
                 <a href="#projects" class="cta-button">See My Impact</a>
                 
                 <div class="metrics">
@@ -712,986 +953,102 @@
             </div>
         </div>
     </section>
-    <!-- Clean & Refined Testimonials Section -->
-
-    <!-- Skills Section -->
-<!-- Replace both your skills section and approach section with this combined one -->
-<section id="skills" class="section skills-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>How I Work & What I Bring</h2>
-            <p>My approach combines technical expertise with hands-on execution to deliver real business results</p>
-        </div>
-        
-        <!-- Core Approach Cards -->
-        <div class="approach-grid">
-            <div class="approach-card main-card" data-aos="fade-up">
-                <div class="approach-icon">
-                    <i class="fas fa-hammer"></i>
-                </div>
-                <h3>Hands-On Builder</h3>
-                <p>I don't just strategize – I actively build, code, and execute. From demo dashboards to data analysis, I roll up my sleeves and deliver.</p>
-                <div class="skill-examples">
-                    <span>Python & SQL</span>
-                    <span>Dashboard Building</span>
-                    <span>Direct Implementation</span>
-                </div>
+    
+    <!-- Streamlined Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How I Work and What I Bring to the Table</h2>
+                <p>Real results from enterprise product management and stakeholder collaboration</p>
             </div>
             
-            <div class="approach-card main-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="approach-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Data-Driven Strategy</h3>
-                <p>I dive deep into customer data and usage metrics to inform product decisions and validate business outcomes.</p>
-                <div class="skill-examples">
-                    <span>PowerBI & Tableau</span>
-                    <span>Customer Analytics</span>
-                    <span>Market Analysis</span>
-                </div>
-            </div>
-            
-            <div class="approach-card main-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="approach-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>Customer-Centric Leader</h3>
-                <p>I conduct extensive customer research and build strong stakeholder relationships to ensure products truly meet market needs.</p>
-                <div class="skill-examples">
-                    <span>58+ Customer Interviews</span>
-                    <span>Journey Mapping</span>
-                    <span>Stakeholder Management</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Detailed Skills Grid -->
-        <div class="detailed-skills">
-            <h3>Technical & Product Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="fade-up">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
+            <!-- Clean 4-Card Testimonials Grid -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card locus-card" data-aos="fade-up">
+                    <div class="card-badge">CUSTOMER-CENTRIC LEADERSHIP</div>
+                    <div class="company-badge locus">Locus Technologies</div>
+                    <h4>Stakeholder Presentation & Product Demo</h4>
+                    <div class="testimonial-quote">
+                        <p>"Min did an <strong>outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong>made Locus look very good</strong>."</p>
+                        <cite>— Marian Carr, Senior Manager</cite>
                     </div>
-                    <div class="skill-name">Development & Analytics</div>
-                    <div class="skill-description">Python, SQL, R, PowerBI, Tableau, Looker, Advanced Excel, Data Visualization</div>
-                    <div class="skill-meter">
-                        <div class="skill-level" style="width: 90%;"></div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Executive Communication</span>
+                        <span class="skill-tag">Product Presentation</span>
+                        <span class="skill-tag">Client Relations</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-icon">
-                        <i class="fas fa-rocket"></i>
+                <div class="testimonial-card ul-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-badge">DATA-DRIVEN STRATEGY</div>
+                    <div class="company-badge ul">UL Solutions</div>
+                    <h4>VP-Level Product Strategy & Planning</h4>
+                    <div class="testimonial-quote">
+                        <p>"Min presented strategic insights and asked <strong>compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong>prioritize high-impact initiatives</strong> for maximum business value."</p>
+                        <cite>— VP Product Strategy Session</cite>
                     </div>
-                    <div class="skill-name">Product Management</div>
-                    <div class="skill-description">Roadmap Planning, Feature Prioritization, A/B Testing, User Research, Go-to-Market Strategy</div>
-                    <div class="skill-meter">
-                        <div class="skill-level" style="width: 95%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="skill-name">Sustainability Domain</div>
-                    <div class="skill-description">Environmental Compliance, ESG Reporting, Sustainability Software, EHS Systems</div>
-                    <div class="skill-meter">
-                        <div class="skill-level" style="width: 92%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* Combined Skills & Approach Section */
-.skills-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
-}
-
-.approach-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.approach-card.main-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 35px;
-    text-align: center;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid var(--primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.approach-card.main-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(126, 34, 206, 0.05), transparent);
-    transition: left 0.5s ease;
-}
-
-.approach-card.main-card:hover::before {
-    left: 100%;
-}
-
-.approach-card.main-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 35px rgba(126, 34, 206, 0.15);
-}
-
-.approach-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    position: relative;
-    z-index: 1;
-}
-
-.approach-icon i {
-    font-size: 2rem;
-    color: white;
-}
-
-.approach-card.main-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: var(--dark);
-    font-weight: 600;
-}
-
-.approach-card.main-card p {
-    color: var(--secondary);
-    margin-bottom: 25px;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.skill-examples {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.skill-examples span {
-    background: linear-gradient(135deg, rgba(126, 34, 206, 0.1), rgba(168, 85, 247, 0.1));
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid rgba(126, 34, 206, 0.2);
-}
-
-/* Detailed Skills Section */
-.detailed-skills {
-    margin-top: 60px;
-}
-
-.detailed-skills h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    color: var(--dark);
-    position: relative;
-}
-
-.detailed-skills h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 2px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.skill-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    padding: 30px;
-    transition: transform 0.3s ease;
-    border-left: 4px solid var(--primary);
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.skill-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(126, 34, 206, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.skill-icon i {
-    color: var(--primary);
-    font-size: 1.5rem;
-}
-
-.skill-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--dark);
-}
-
-.skill-description {
-    color: var(--secondary);
-    line-height: 1.5;
-    font-size: 0.95rem;
-}
-
-.skill-meter {
-    height: 6px;
-    background-color: #e2e8f0;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.skill-level {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
-    border-radius: 3px;
-    transition: width 1s ease;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .approach-grid,
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .approach-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .approach-card.main-card {
-        padding: 25px;
-    }
-}
-</style>
-    <!-- Concise Impact Testimonials Section -->
-<section id="testimonials" class="section testimonials-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Proven Product Leadership Impact</h2>
-            <p>Real results from enterprise product management and stakeholder collaboration</p>
-        </div>
-        
-<!--         <!-- Featured UL Solutions Impact -->
-        <div class="hero-testimonial" data-aos="fade-up">
-            <div class="testimonial-content">
-                <div class="company-badge ul">UL Solutions</div>
-                <div class="testimonial-with-visual">
-                    <div class="testimonial-text">
-                        <div class="impact-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"You have done an <strong>AMAZING job</strong> with this!!! Great work! We are very impressed with the improvements you lead the team that came up."</p>
-                            <cite>— Senior Product Stakeholder</cite>
-                        </div>
-                        
-                        <div class="project-summary">
-                            <h3>Enterprise Product Migration Leadership</h3>
-                            <p>Led cross-functional 8-member tiger team through enterprise system migration, delivering 42+ weeks savings and measurable efficiency gains through strategic product management, program coordination, and data-driven analytics.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="dashboard-visual">
-                        <div class="dashboard-preview">
-                            <img src="migration-dashboard.png" alt="Migration Analytics Dashboard" class="dashboard-image">
-                            <div class="dashboard-overlay">
-                                <div class="overlay-label">Migration Analytics Dashboard</div>
-                            </div>
-                        </div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Executive Communication</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Product Roadmapping</span>
                     </div>
                 </div>
                 
-                <div class="key-results">
-                    <div class="result-item">
-                        <div class="result-number">42+</div>
-                        <div class="result-label">Weeks Saved</div>
+                <div class="testimonial-card locus-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-badge">HANDS-ON BUILDER</div>
+                    <div class="company-badge locus">Locus Technologies</div>
+                    <h4>On-Demand Customer Solution Development</h4>
+                    <div class="testimonial-quote">
+                        <p>"During our onsite training, Min <strong>quickly built a demo dashboard</strong> that was remarkably close to our specific requirements. Her ability to <strong>rapidly translate our needs into a working solution</strong> was impressive."</p>
+                        <cite>— Key Customer</cite>
                     </div>
-                    <div class="result-item">
-                        <div class="result-number">50%</div>
-                        <div class="result-label">Efficiency Gain</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-number">8</div>
-                        <div class="result-label">Team Members Led</div>
-                    </div>
-                </div>
-                
-                <button class="learn-more-btn" onclick="toggleProjectDetails()">
-                    <i class="fas fa-chevron-down"></i>
-                    Learn More About This Project
-                </button>
-            </div>
-        </div>
-         -->
-        <!-- Detailed Project Info (Hidden by default) -->
-        <div class="project-details" id="projectDetails" style="display: none;">
-            <div class="details-content">
-                <div class="challenge-solution">
-                    <div class="challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> The Challenge</h4>
-                        <p>Lead enterprise system product migration affecting thousands of users with zero downtime tolerance across multiple business units.</p>
-                    </div>
-                    <div class="solution">
-                        <h4><i class="fas fa-lightbulb"></i> My Approach</h4>
-                        <p>Orchestrated comprehensive strategy using database analytics, user research, and cross-functional collaboration to develop 15 strategic solutions.</p>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Rapid Prototyping</span>
+                        <span class="skill-tag">Customer-Centric Development</span>
+                        <span class="skill-tag">Technical Agility</span>
                     </div>
                 </div>
                 
-                <div class="pm-skills-applied">
-                    <h4>Product Management Skills Applied:</h4>
-                    <div class="skills-grid">
-                        <span class="skill-item">Cross-functional Team Leadership</span>
-                        <span class="skill-item">Data-Driven Product Decisions</span>
-                        <span class="skill-item">Stakeholder Alignment</span>
-                        <span class="skill-item">Product Roadmap Management</span>
-                        <span class="skill-item">User Research & Analytics</span>
-                        <span class="skill-item">Strategic Planning</span>
+                <div class="testimonial-card locus-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-badge">CUSTOMER SUCCESS FOCUS</div>
+                    <div class="company-badge locus">Locus Technologies</div>
+                    <h4>Product Delivery Excellence</h4>
+                    <div class="testimonial-quote">
+                        <p>"Thanks so much for <strong>pushing this through and helping the customer out</strong>. They will no doubt appreciate your efforts."</p>
+                        <cite>— Jennifer Peterson, Project Manager</cite>
+                    </div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Customer Advocacy</span>
+                        <span class="skill-tag">Solution Delivery</span>
+                        <span class="skill-tag">Problem Solving</span>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Client Success Stories Grid -->
-        <div class="client-stories-grid">
-            <div class="story-card strategic-thinking" data-aos="fade-up">
-                <div class="story-badge">STRATEGIC PRODUCT ANALYSIS</div>
-                <div class="company-badge ul">UL Solutions</div>
-                <h4>VP-Level Product Strategy & Planning</h4>
-                <div class="story-quote">
-                    <p>"Min presented strategic insights and asked <strong>compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong>prioritize high-impact initiatives</strong> for maximum business value."</p>
-                    <cite>— VP Product Strategy Session</cite>
-                </div>
-                <div class="story-skills">
-                    <span class="skill-tag">Executive Communication</span>
-                    <span class="skill-tag">Strategic Planning</span>
-                    <span class="skill-tag">Product Roadmapping</span>
-                </div>
-            </div>
-            
-            <div class="story-card client-excellence" data-aos="fade-up" data-aos-delay="100">
-                <div class="story-badge">CLIENT RELATIONSHIP MANAGEMENT</div>
-                <div class="company-badge locus">Locus Technologies</div>
-                <h4>Stakeholder Presentation & Product Demo</h4>
-                <div class="story-quote">
-                    <p>"Min did an <strong>outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong>made Locus look very good</strong>."</p>
-                    <cite>— Marian Carr, Senior Manager</cite>
-                </div>
-                <div class="story-skills">
-                    <span class="skill-tag">Executive Communication</span>
-                    <span class="skill-tag">Product Presentation</span>
-                    <span class="skill-tag">Client Relations</span>
-                </div>
-            </div>
-            
-            <div class="story-card technical-delivery" data-aos="fade-up" data-aos-delay="200">
-                <div class="story-badge">TECHNICAL PRODUCT LEADERSHIP</div>
-                <div class="company-badge locus">Locus Technologies</div>
-                <h4>On-Demand Customer Solution Development</h4>
-                <div class="story-quote">
-                    <p>"During our onsite training, Min <strong>quickly built a demo dashboard</strong> that was remarkably close to our specific requirements. Her ability to <strong>rapidly translate our needs into a working solution</strong> was impressive."</p>
-                    <cite>— Key Customer</cite>
-                </div>
-                <div class="story-skills">
-                    <span class="skill-tag">Rapid Prototyping</span>
-                    <span class="skill-tag">Customer-Centric Development</span>
-                    <span class="skill-tag">Technical Agility</span>
-                </div>
-            </div>
-            
-            <div class="story-card customer-focus" data-aos="fade-up" data-aos-delay="300">
-                <div class="story-badge">CUSTOMER SUCCESS FOCUS</div>
-                <div class="company-badge locus">Locus Technologies</div>
-                <h4>Product Delivery Excellence</h4>
-                <div class="story-quote">
-                    <p>"Thanks so much for <strong>pushing this through and helping the customer out</strong>. They will no doubt appreciate your efforts."</p>
-                    <cite>— Jennifer Peterson, Project Manager</cite>
-                </div>
-                <div class="story-skills">
-                    <span class="skill-tag">Customer Advocacy</span>
-                    <span class="skill-tag">Solution Delivery</span>
-                    <span class="skill-tag">Problem Solving</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Bottom Impact Banner -->
-        <div class="impact-summary" data-aos="fade-up">
-            <div class="summary-header">
-                <h3>Track Record of Measurable Impact</h3>
-            </div>
-            <div class="impact-metrics">
-                <div class="metric">
-                    <div class="metric-number">15%</div>
-                    <div class="metric-label">Revenue Growth</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-number">100%</div>
-                    <div class="metric-label">Client Retention</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-number">58+</div>
-                    <div class="metric-label">Customer Interviews</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-number">$1.2M</div>
-                    <div class="metric-label">New Revenue</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* Concise Testimonials Section */
-.testimonials-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f3e8ff 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hero Testimonial */
-.hero-testimonial {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 60px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-testimonial::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-}
-
-.company-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.company-badge.ul {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
-}
-
-.company-badge.locus {
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
-}
-
-/* Testimonial with Visual */
-.testimonial-with-visual {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.testimonial-text {
-    flex: 1;
-}
-
-.dashboard-visual {
-    flex: 0 0 350px;
-}
-
-.dashboard-preview {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    background-color: #f8fafc;
-}
-
-.dashboard-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.dashboard-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 15px;
-    color: white;
-}
-
-.overlay-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-.impact-quote {
-    margin-bottom: 25px;
-    position: relative;
-    padding-left: 40px;
-}
-
-.impact-quote i {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--primary);
-    font-size: 1.5rem;
-}
-
-.impact-quote p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    color: var(--dark);
-    font-style: italic;
-    margin-bottom: 15px;
-}
-
-.impact-quote strong {
-    color: var(--primary);
-    font-weight: 700;
-}
-
-.impact-quote cite {
-    font-size: 1rem;
-    color: var(--secondary);
-    font-style: normal;
-    font-weight: 600;
-}
-
-.project-summary {
-    margin-bottom: 30px;
-}
-
-.project-summary h3 {
-    font-size: 1.6rem;
-    color: var(--dark);
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.project-summary p {
-    font-size: 1.1rem;
-    color: var(--secondary);
-    line-height: 1.5;
-}
-
-.key-results {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-    justify-content: center;
-}
-
-.result-item {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
-    border-radius: 12px;
-    min-width: 120px;
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-}
-
-.result-number {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    line-height: 1;
-}
-
-.result-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    opacity: 0.95;
-}
-
-.learn-more-btn {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-}
-
-.learn-more-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(126, 34, 206, 0.3);
-}
-
-.learn-more-btn i {
-    transition: transform 0.3s ease;
-}
-
-.learn-more-btn.expanded i {
-    transform: rotate(180deg);
-}
-
-/* Project Details (Expandable) */
-.project-details {
-    background-color: rgba(126, 34, 206, 0.04);
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 60px;
-    border-left: 5px solid var(--primary);
-}
-
-.challenge-solution {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-.challenge,
-.solution {
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.challenge {
-    background-color: rgba(239, 68, 68, 0.06);
-    border-left: 4px solid #ef4444;
-}
-
-.solution {
-    background-color: rgba(34, 197, 94, 0.06);
-    border-left: 4px solid #22c55e;
-}
-
-.challenge h4,
-.solution h4 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: var(--dark);
-}
-
-.challenge h4 i { color: #ef4444; }
-.solution h4 i { color: #22c55e; }
-
-.pm-skills-applied h4 {
-    color: var(--dark);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.skill-item {
-    background: linear-gradient(135deg, rgba(126, 34, 206, 0.08), rgba(168, 85, 247, 0.08));
-    color: var(--primary);
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-align: center;
-    border: 1px solid rgba(126, 34, 206, 0.15);
-}
-
-/* Client Stories Grid */
-.client-stories-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-bottom: 60px;
-}
-
-.story-card {
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.story-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-}
-
-.client-excellence::before { background: linear-gradient(90deg, #10b981, #059669); }
-.technical-delivery::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
-.customer-focus::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
-.strategic-thinking::before { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
-
-.story-card:hover {
-    transform: translateY(-5px);
-}
-
-.story-badge {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--secondary);
-    letter-spacing: 0.8px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 8px;
-}
-
-.story-card h4 {
-    color: var(--dark);
-    font-size: 1.3rem;
-    margin: 12px 0 20px 0;
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-.story-quote {
-    margin-bottom: 20px;
-}
-
-.story-quote p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--dark);
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.story-quote strong {
-    color: var(--primary);
-    font-weight: 700;
-}
-
-.story-quote cite {
-    font-size: 0.85rem;
-    color: var(--secondary);
-    font-style: normal;
-    font-weight: 600;
-}
-
-.story-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.story-skills .skill-tag {
-    background: linear-gradient(135deg, rgba(126, 34, 206, 0.08), rgba(168, 85, 247, 0.08));
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(126, 34, 206, 0.15);
-}
-
-/* Impact Summary */
-.impact-summary {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
-    color: white;
-}
-
-.summary-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.impact-metrics {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.metric {
-    text-align: center;
-}
-
-.metric-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    line-height: 1;
-}
-
-.metric-label {
-    font-size: 1rem;
-    font-weight: 600;
-    opacity: 0.95;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .challenge-solution {
-        grid-template-columns: 1fr;
-    }
+    </section>
     
-    .client-stories-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .key-results {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .testimonial-with-visual {
-        flex-direction: column;
-    }
-    
-    .dashboard-visual {
-        flex: none;
-        align-self: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-testimonial {
-        padding: 30px;
-    }
-    
-    .impact-quote p {
-        font-size: 1.2rem;
-    }
-    
-    .key-results {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .result-item {
-        min-width: 200px;
-    }
-    
-    .impact-metrics {
-        gap: 25px;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .story-card {
-        padding: 20px;
-    }
-}
-</style>
-
-<script>
-function toggleProjectDetails() {
-    const details = document.getElementById('projectDetails');
-    const button = document.querySelector('.learn-more-btn');
-    
-    if (details.style.display === 'none' || details.style.display === '') {
-        details.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
-        button.classList.add('expanded');
-        
-        // Smooth scroll to details
-        setTimeout(() => {
-            details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
-    } else {
-        details.style.display = 'none';
-        button.innerHTML = '<i class="fas fa-chevron-down"></i> Learn More About This Project';
-        button.classList.remove('expanded');
-    }
-}
-</script>
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-title">
-                <h2>Featured Work</h2>
+                <h2>Projects I've Executed</h2>
                 <p>A showcase of product initiatives that delivered measurable business outcomes</p>
             </div>
             
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
+                <!-- Enterprise Sustainability Platform -->
+                <div class="project-card sustainability-card" data-aos="fade-up">
                     <div class="project-image">
                         <img src="UL.png" alt="Enterprise Sustainability Platform">
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Product Strategy</span>
-                        <span class="project-tag">UL Solutions</span>
+                        <div class="project-tags">
+                            <span class="project-tag">Product Strategy</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
                         
                         <h3 class="project-title">Enterprise Sustainability Platform</h3>
-                        <p class="project-description">Led global product strategy for enterprise sustainability platform, delivering significant growth through customer-centric enhancements and market analysis.</p>
+                        <p class="project-description">Led global product strategy for enterprise sustainability platform.</p>
                         <div class="project-metrics">
                             <div class="project-metric">
                                 <i class="fas fa-chart-line"></i>
@@ -1702,10 +1059,84 @@ function toggleProjectDetails() {
                                 <span>58+ Customer Interviews</span>
                             </div>
                         </div>
+                        <button class="learn-more-btn" onclick="toggleDetails('sustainability')">
+                            <i class="fas fa-chevron-down"></i>
+                            Learn More About This Project
+                        </button>
+                        <div class="project-details" id="sustainability-details" style="display: none;">
+                            <p>Delivered significant growth through customer-centric enhancements and comprehensive market analysis. Conducted extensive user research to identify key pain points and opportunities for product enhancement.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- Enterprise Product Migration Leadership -->
+                <div class="project-card migration-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="migration-dashboard.png" alt="Enterprise Migration Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Enterprise Migration</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
+                        
+                        <h3 class="project-title">Enterprise Product Migration Leadership</h3>
+                        <p class="project-description">Led cross-functional 7-member tiger team through enterprise OHM-to-OHS migration.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-clock"></i>
+                                <span>42+ Weeks Saved</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-users-cog"></i>
+                                <span>7-Member Tiger Team</span>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" onclick="toggleDetails('migration')">
+                            <i class="fas fa-chevron-down"></i>
+                            Learn More About This Project
+                        </button>
+                        <div class="project-details" id="migration-details" style="display: none;">
+                            <p>Delivered 42+ weeks savings and measurable efficiency gains through strategic product management and data-driven analytics. Orchestrated comprehensive strategy using database analytics, user research, and cross-functional collaboration to develop 15 strategic solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Customer Interview Program -->
+                <div class="project-card research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="customer-research.png" alt="Customer Research Analytics">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Customer Research</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
+                        
+                        <h3 class="project-title">Enterprise Customer Interview Program</h3>
+                        <p class="project-description">Conducted comprehensive customer research program with 58+ enterprise clients.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-comments"></i>
+                                <span>58+ Customer Interviews</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>15 Key Product Insights</span>
+                            </div>
+                        </div>
+                        <button class="learn-more-btn" onclick="toggleDetails('research')">
+                            <i class="fas fa-chevron-down"></i>
+                            Learn More About This Project
+                        </button>
+                        <div class="project-details" id="research-details" style="display: none;">
+                            <p>Translated insights into actionable product roadmap changes that drove significant revenue growth. Identified key customer pain points and developed strategic recommendations that influenced product direction and business outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Out-of-the-Box Compliance Suite -->
+                <div class="project-card compliance-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-image">
                         <video class="project-video" autoplay muted loop>
                             <source src="Locus.mp4" type="video/mp4">
@@ -1713,11 +1144,13 @@ function toggleProjectDetails() {
                         </video>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Product Development</span>
-                        <span class="project-tag">Locus Technologies</span>
+                        <div class="project-tags">
+                            <span class="project-tag">Product Development</span>
+                            <span class="project-tag locus">Locus Technologies</span>
+                        </div>
                         
                         <h3 class="project-title">Out-of-the-Box Compliance Suite</h3>
-                        <p class="project-description">Launched 4 out-of-the-box compliance and sustainability products for enterprise clients, resulting in perfect customer retention and significant new revenue.</p>
+                        <p class="project-description">Launched 4 out-of-the-box compliance and sustainability products for enterprise clients.</p>
                         <div class="project-metrics">
                             <div class="project-metric">
                                 <i class="fas fa-dollar-sign"></i>
@@ -1727,6 +1160,13 @@ function toggleProjectDetails() {
                                 <i class="fas fa-sync-alt"></i>
                                 <span>100% Customer Renewal Rate</span>
                             </div>
+                        </div>
+                        <button class="learn-more-btn" onclick="toggleDetails('compliance')">
+                            <i class="fas fa-chevron-down"></i>
+                            Learn More About This Project
+                        </button>
+                        <div class="project-details" id="compliance-details" style="display: none;">
+                            <p>Resulted in perfect customer retention and significant new revenue. Developed comprehensive product suite addressing key compliance challenges while ensuring seamless implementation for enterprise environments.</p>
                         </div>
                     </div>
                 </div>
@@ -1744,9 +1184,7 @@ function toggleProjectDetails() {
             
             <div class="contact-container">
                 <div class="contact-info">
-<!--                  <img src="https://via.placeholder.com/150" alt="Min Jiang" class="profile-image"> -->
                     <h3>Get In Touch</h3>
-<!--                     <p>Let's set a meeting time or a coffee time!</p> -->
                     
                     <div class="contact-details">
                         <p><i class="fas fa-envelope"></i> <a href="mailto:minjiangus@gmail.com">minjiangus@gmail.com</a></p>
@@ -1756,7 +1194,7 @@ function toggleProjectDetails() {
                     </div>
                 </div>
                 
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/xdkogkpw" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -1788,7 +1226,7 @@ function toggleProjectDetails() {
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#timeline">Professional Journey</a></li>
-                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#testimonials">Impact</a></li>
                         <li><a href="#projects">Projects</a></li>
                     </ul>
                 </div>
@@ -1812,7 +1250,7 @@ function toggleProjectDetails() {
     <!-- AOS (Animate On Scroll) Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
-    <!-- Simple JavaScript -->
+    <!-- JavaScript -->
     <script>
         // Initialize AOS
         AOS.init({
@@ -1828,24 +1266,6 @@ function toggleProjectDetails() {
         menuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
-        
-        // Check for mobile view to show timeline
-        function handleMobileTimeline() {
-            const desktopTimeline = document.querySelector('.desktop-timeline');
-            const mobileTimeline = document.querySelector('.mobile-timeline');
-            
-            if (window.innerWidth <= 768) {
-                desktopTimeline.style.display = 'none';
-                mobileTimeline.style.display = 'block';
-            } else {
-                desktopTimeline.style.display = 'block';
-                mobileTimeline.style.display = 'none';
-            }
-        }
-        
-        // Run on load and resize
-        window.addEventListener('load', handleMobileTimeline);
-        window.addEventListener('resize', handleMobileTimeline);
         
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1920,6 +1340,22 @@ function toggleProjectDetails() {
         window.addEventListener('scroll', addAnimateClass);
         // Initial check
         window.addEventListener('load', addAnimateClass);
+        
+        // Project details toggle function
+        function toggleDetails(projectId) {
+            const details = document.getElementById(projectId + '-details');
+            const button = details.previousElementSibling;
+            
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+                button.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
+                button.classList.add('expanded');
+            } else {
+                details.style.display = 'none';
+                button.innerHTML = '<i class="fas fa-chevron-down"></i> Learn More About This Project';
+                button.classList.remove('expanded');
+            }
+        }
     </script>
 </body>
 </html>
