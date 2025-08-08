@@ -139,62 +139,63 @@
     line-height: 1.6;
 }
 
-/* Enhanced Learn More Button */
+/* REPLACE your existing .learn-more-btn CSS with this optimized version */
+
 .learn-more-btn {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    padding: 8px 18px;  /* Reduced from 12px 24px */
+    border-radius: 20px;  /* Reduced from 25px */
+    font-size: 0.85rem;  /* Reduced from 0.9rem */
     font-weight: 600;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;  /* Reduced from 10px */
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(126, 34, 206, 0.2);
-    margin-top: 15px;
+    box-shadow: 0 3px 12px rgba(126, 34, 206, 0.2);  /* Reduced shadow */
+    margin-top: 12px;  /* Reduced from 15px */
+    width: fit-content;  /* Prevents stretching */
+    max-width: 140px;  /* Maximum width constraint */
 }
 
 .learn-more-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(126, 34, 206, 0.3);
+    box-shadow: 0 5px 18px rgba(126, 34, 206, 0.3);
     color: white;
 }
 
 .learn-more-btn i {
     transition: transform 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 0.8rem;  /* Slightly smaller icon */
 }
 
 .learn-more-btn:hover i {
     transform: translateX(3px);
 }
 
-/* Mobile Responsive Updates */
+/* Mobile responsive - even smaller on mobile */
 @media (max-width: 768px) {
-    .context-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
     .learn-more-btn {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-        gap: 8px;
+        padding: 6px 14px;  /* Even smaller on mobile */
+        font-size: 0.8rem;
+        gap: 6px;
+        margin-top: 10px;
+        max-width: 120px;
     }
     
-    .stakeholder-quote {
-        padding: 20px;
-        margin: 20px 0;
+    .learn-more-btn i {
+        font-size: 0.75rem;
     }
-    
-    .strategy-framework,
-    .team-collaboration {
-        padding: 20px;
-        margin: 20px 0;
+}
+
+@media (max-width: 480px) {
+    .learn-more-btn {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+        max-width: 110px;
     }
 }
         body {
