@@ -46,6 +46,128 @@
             padding: 0 20px;
         }
         
+        /* Password Protection Screen */
+        .password-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
+            padding: 20px;
+        }
+
+        .password-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(126, 34, 206, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 5px solid var(--research-blue);
+        }
+
+        .lock-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--research-blue), var(--research-blue-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .password-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .password-subtitle {
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .password-form {
+            margin-bottom: 30px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--research-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .password-submit {
+            background: linear-gradient(135deg, var(--research-blue), var(--research-blue-light));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .password-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #dc2626;
+            display: none;
+        }
+
+        .back-to-portfolio {
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-portfolio:hover {
+            color: var(--research-blue);
+            transform: translateX(-3px);
+        }
+
+        /* Main Content (Hidden Initially) */
+        .main-content-wrapper {
+            display: none;
+        }
+        
         /* Header */
         header {
             background-color: white;
@@ -509,6 +631,21 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            .password-container {
+                padding: 30px;
+                margin: 20px;
+            }
+
+            .password-title {
+                font-size: 1.6rem;
+            }
+
+            .lock-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -572,209 +709,296 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Min Jiang</div>
-                <a href="index.html" class="back-button">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Portfolio
-                </a>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transformed Product Development Through Customer Research</h1>
-                <div class="company-meta">UL Solutions • Senior Product Manager • 2022-2024</div>
-                
-                <div class="hero-metrics">
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
-                        <div class="metric-number">50+</div>
-                        <div class="metric-label">Customer Interviews</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
-                        <div class="metric-number">67%</div>
-                        <div class="metric-label">Customer Retention Increase</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
-                        <div class="metric-number">18</div>
-                        <div class="metric-label">Validated Product Insights</div>
-                    </div>
-                </div>
+    <!-- Password Protection Screen -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-container" data-aos="zoom-in">
+            <div class="lock-icon">
+                <i class="fas fa-lock"></i>
             </div>
-        </div>
-    </section>
-    
-    <!-- Media Gallery Section -->
-    <section class="media-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Research-Driven Product Strategy</h2>
-                <p class="section-subtitle">From assumption-based to evidence-based product decisions through systematic customer research</p>
+            <h1 class="password-title">Protected Content</h1>
+            <p class="password-subtitle">This project contains confidential information. Please enter the access code to continue.</p>
+            
+            <form class="password-form" id="password-form">
+                <input type="password" id="password-input" class="password-input" placeholder="Enter access code" autocomplete="off">
+                <button type="submit" class="password-submit">
+                    <i class="fas fa-unlock-alt"></i> Access Project Details
+                </button>
+            </form>
+            
+            <div id="error-message" class="error-message">
+                <i class="fas fa-exclamation-triangle"></i> Incorrect access code. Please try again.
             </div>
             
-            <div class="media-grid">
-                <!-- Featured Research Framework -->
-                <div class="media-item featured-media" data-aos="fade-up">
-                    <div class="media-placeholder">
-                        <i class="fas fa-search"></i>
-                        <h4>Customer Research Framework & Process</h4>
-                        <p>Established comprehensive interview methodology that increased customer retention by 67% compared to industry baseline of 40%. Developed standardized process for capturing customer insights across multiple product areas and translating findings into prioritized roadmap features that directly addressed user pain points.</p>
-                    </div>
-                </div>
-                
-                <!-- Interview Process Documentation -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="media-placeholder">
-                        <i class="fas fa-comments"></i>
-                        <h4>Structured Interview Process</h4>
-                        <p>Created reusable interview templates that reduced research preparation time by 40% while ensuring consistent data quality across customer segments.</p>
-                    </div>
-                </div>
-                
-                <!-- Data Analysis & Insights -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="media-placeholder">
-                        <i class="fas fa-chart-bar"></i>
-                        <h4>Research Impact Analytics</h4>
-                        <p>Power BI dashboard tracking 18 validated product insights that drove 85% of Q3-Q4 2023 roadmap prioritization decisions, resulting in measurable customer satisfaction improvements.</p>
-                    </div>
-                </div>
-                
-                <!-- Feedback Management System -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="media-placeholder">
-                        <i class="fas fa-cogs"></i>
-                        <h4>Cross-Functional Integration</h4>
-                        <p>Integrated feedback workflow connecting SharePoint, Aha!, and ADO that reduced time-to-resolution for customer requests by 30% compared to previous ad-hoc processes.</p>
-                    </div>
-                </div>
-            </div>
+            <a href="index.html#projects" class="back-to-portfolio">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
         </div>
-    </section>
-    
-    <!-- Company & Product Context Section -->
-    <section class="main-content">
-        <div class="container">
-            <div class="content-section context-section" data-aos="fade-up">
-                <div class="content-header">
-                    <div class="content-icon context-icon">
-                        🏢
-                    </div>
-                    <h3 class="content-title">Business Context</h3>
-                </div>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>UL Solutions</h4>
-                        <p>$2.8B global safety science leader serving 70% of Fortune 500 companies across manufacturing, healthcare, and technology sectors. Led product management for compliance training platform serving 100K+ end users across regulated industries.</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Market Challenge</h4>
-                        <p>Customer retention declining to 33% (vs industry benchmark of 40%) due to product decisions driven by internal assumptions rather than validated customer insights in rapidly evolving safety and compliance markets.</p>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="main-content-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">Min Jiang</div>
+                    <a href="index.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Portfolio
+                    </a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transformed Product Development Through Customer Research</h1>
+                    <div class="company-meta">UL Solutions • Senior Product Manager • 2022-2024</div>
+                    
+                    <div class="hero-metrics">
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
+                            <div class="metric-number">50+</div>
+                            <div class="metric-label">Customer Interviews</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
+                            <div class="metric-number">67%</div>
+                            <div class="metric-label">Customer Retention Increase</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
+                            <div class="metric-number">18</div>
+                            <div class="metric-label">Validated Product Insights</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Challenge Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="100">
-                <div class="content-header">
-                    <div class="content-icon challenge-icon emoji-icon">
-                        ⚠️
-                    </div>
-                    <h3 class="content-title">The Problem</h3>
+        </section>
+        
+        <!-- Media Gallery Section -->
+        <section class="media-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Research-Driven Product Strategy</h2>
+                    <p class="section-subtitle">From assumption-based to evidence-based product decisions through systematic customer research</p>
                 </div>
-                <p class="content-text">Reduced customer retention by 18% below industry benchmarks as measured by annual subscription renewals by developing features based on internal assumptions rather than validated customer needs, resulting in declining product-market fit in the competitive safety training and compliance space.</p>
                 
-                <div class="stakeholder-quote">
-                    <blockquote>
-                        "We were building what we thought customers wanted instead of what they actually needed. Min's research program gave us the customer voice that was missing from our decision-making process."
-                    </blockquote>
-                    <cite>— VP of Product Development, UL Solutions</cite>
+                <div class="media-grid">
+                    <!-- Featured Research Framework -->
+                    <div class="media-item featured-media" data-aos="fade-up">
+                        <div class="media-placeholder">
+                            <i class="fas fa-search"></i>
+                            <h4>Customer Research Framework & Process</h4>
+                            <p>Established comprehensive interview methodology that increased customer retention by 67% compared to industry baseline of 40%. Developed standardized process for capturing customer insights across multiple product areas and translating findings into prioritized roadmap features that directly addressed user pain points.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Interview Process Documentation -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media-placeholder">
+                            <i class="fas fa-comments"></i>
+                            <h4>Structured Interview Process</h4>
+                            <p>Created reusable interview templates that reduced research preparation time by 40% while ensuring consistent data quality across customer segments.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Analysis & Insights -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="media-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Research Impact Analytics</h4>
+                            <p>Power BI dashboard tracking 18 validated product insights that drove 85% of Q3-Q4 2023 roadmap prioritization decisions, resulting in measurable customer satisfaction improvements.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feedback Management System -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="media-placeholder">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Cross-Functional Integration</h4>
+                            <p>Integrated feedback workflow connecting SharePoint, Aha!, and ADO that reduced time-to-resolution for customer requests by 30% compared to previous ad-hoc processes.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Action Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="200">
-                <div class="content-header">
-                    <div class="content-icon action-icon emoji-icon">
-                        🔍
+        </section>
+        
+        <!-- Company & Product Context Section -->
+        <section class="main-content">
+            <div class="container">
+                <div class="content-section context-section" data-aos="fade-up">
+                    <div class="content-header">
+                        <div class="content-icon context-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="content-title">Business Context</h3>
                     </div>
-                    <h3 class="content-title">Strategic Research Approach</h3>
+                    <div class="context-grid">
+                        <div class="context-item">
+                            <h4>UL Solutions</h4>
+                            <p>$2.8B global safety science leader serving 70% of Fortune 500 companies across manufacturing, healthcare, and technology sectors. Led product management for compliance training platform serving 100K+ end users across regulated industries.</p>
+                        </div>
+                        <div class="context-item">
+                            <h4>Market Challenge</h4>
+                            <p>Customer retention declining to 33% (vs industry benchmark of 40%) due to product decisions driven by internal assumptions rather than validated customer insights in rapidly evolving safety and compliance markets.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="content-text">Established comprehensive customer research program that increased retention by 67% as measured by annual subscription renewals compared to 33% baseline by systematically capturing customer voice through structured interviews and data-driven product decisions:</p>
-                <ul class="action-list">
-                    <li><strong>Designed scalable interview methodology</strong> covering customer workflows, pain points, and feature requirements that reduced research preparation time by 40% compared to previous ad-hoc approaches</li>
-                    <li><strong>Conducted 50+ strategic customer interviews</strong> focusing on migrated customers to improve retention rates from 33% to 67% within 12 months</li>
-                    <li><strong>Developed evidence-based user personas</strong> including "Sarah, the Compliance Administrator" that drove 85% of Q3-Q4 2023 roadmap prioritization decisions</li>
-                    <li><strong>Built systematic feedback categorization</strong> capturing 107 customer responses across 18 improvement areas, leading to data-driven feature prioritization that improved customer satisfaction scores by 28%</li>
-                    <li><strong>Created integrated feedback workflow</strong> using SharePoint, Power BI, Aha!, and ADO that reduced customer request resolution time by 30% through improved cross-functional collaboration</li>
-                    <li><strong>Established quarterly research cycles</strong> maintaining current customer insights that enabled proactive product adjustments, resulting in zero major customer escalations in Q4 2023</li>
-                </ul>
                 
-                <div class="research-framework">
-                    <h4>Research Methodology & Impact</h4>
-                    <ul>
-                        <li>50+ structured interviews with 30-60 minute protocols achieving 95% response rate</li>
-                        <li>Power BI analytics tracking customer sentiment trends with 18 validated insights</li>
-                        <li>Aha! integration enabling data-driven roadmap prioritization affecting $2.3M in feature investments</li>
-                        <li>Cross-functional collaboration increasing engineering team confidence in feature decisions by 45%</li>
+                <!-- Challenge Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="content-header">
+                        <div class="content-icon challenge-icon emoji-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="content-title">The Problem</h3>
+                    </div>
+                    <p class="content-text">Reduced customer retention by 18% below industry benchmarks as measured by annual subscription renewals by developing features based on internal assumptions rather than validated customer needs, resulting in declining product-market fit in the competitive safety training and compliance space.</p>
+                    
+                    <div class="stakeholder-quote">
+                        <blockquote>
+                            "We were building what we thought customers wanted instead of what they actually needed. Min's research program gave us the customer voice that was missing from our decision-making process."
+                        </blockquote>
+                        <cite>— VP of Product Development, UL Solutions</cite>
+                    </div>
+                </div>
+                
+                <!-- Action Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content-header">
+                        <div class="content-icon action-icon emoji-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="content-title">Strategic Research Approach</h3>
+                    </div>
+                    <p class="content-text">Established comprehensive customer research program that increased retention by 67% as measured by annual subscription renewals compared to 33% baseline by systematically capturing customer voice through structured interviews and data-driven product decisions:</p>
+                    <ul class="action-list">
+                        <li><strong>Designed scalable interview methodology</strong> covering customer workflows, pain points, and feature requirements that reduced research preparation time by 40% compared to previous ad-hoc approaches</li>
+                        <li><strong>Conducted 50+ strategic customer interviews</strong> focusing on migrated customers to improve retention rates from 33% to 67% within 12 months</li>
+                        <li><strong>Developed evidence-based user personas</strong> including "Sarah, the Compliance Administrator" that drove 85% of Q3-Q4 2023 roadmap prioritization decisions</li>
+                        <li><strong>Built systematic feedback categorization</strong> capturing 107 customer responses across 18 improvement areas, leading to data-driven feature prioritization that improved customer satisfaction scores by 28%</li>
+                        <li><strong>Created integrated feedback workflow</strong> using SharePoint, Power BI, Aha!, and ADO that reduced customer request resolution time by 30% through improved cross-functional collaboration</li>
+                        <li><strong>Established quarterly research cycles</strong> maintaining current customer insights that enabled proactive product adjustments, resulting in zero major customer escalations in Q4 2023</li>
                     </ul>
+                    
+                    <div class="research-framework">
+                        <h4>Research Methodology & Impact</h4>
+                        <ul>
+                            <li>50+ structured interviews with 30-60 minute protocols achieving 95% response rate</li>
+                            <li>Power BI analytics tracking customer sentiment trends with 18 validated insights</li>
+                            <li>Aha! integration enabling data-driven roadmap prioritization affecting $2.3M in feature investments</li>
+                            <li>Cross-functional collaboration increasing engineering team confidence in feature decisions by 45%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-process">
+                        <h4>Measurable Research Outcomes</h4>
+                        <div class="process-grid">
+                            <div class="process-item">
+                                <h5>Customer Insights</h5>
+                                <p>107 responses → 18 validated insights driving 85% of roadmap decisions</p>
+                            </div>
+                            <div class="process-item">
+                                <h5>Retention Impact</h5>
+                                <p>33% → 67% customer retention (vs 40% industry benchmark)</p>
+                            </div>
+                            <div class="process-item">
+                                <h5>Process Efficiency</h5>
+                                <p>40% reduction in research prep time + 30% faster resolution</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="research-process">
-                    <h4>Measurable Research Outcomes</h4>
-                    <div class="process-grid">
-                        <div class="process-item">
-                            <h5>Customer Insights</h5>
-                            <p>107 responses → 18 validated insights driving 85% of roadmap decisions</p>
+                <!-- Win Section -->
+                <div class="content-section win-section" data-aos="fade-up" data-aos-delay="300">
+                    <div class="content-header">
+                        <div class="content-icon win-icon emoji-icon">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <div class="process-item">
-                            <h5>Retention Impact</h5>
-                            <p>33% → 67% customer retention (vs 40% industry benchmark)</p>
-                        </div>
-                        <div class="process-item">
-                            <h5>Process Efficiency</h5>
-                            <p>40% reduction in research prep time + 30% faster resolution</p>
-                        </div>
+                        <h3 class="content-title">Business Impact</h3>
+                    </div>
+                    <p class="content-text">Transformed product development from assumption-based to evidence-based decision making, achieving 67% customer retention (vs 40% industry benchmark) as measured by annual subscription renewals by implementing systematic customer research that influenced $2.3M in feature investments and drove 85% of roadmap prioritization decisions, establishing reusable methodology now adopted company-wide across multiple product lines.</p>
+                </div>
+                
+                <!-- Other Projects Navigation -->
+                <div class="other-projects" data-aos="fade-up" data-aos-delay="400">
+                    <h3>View Other Projects</h3>
+                    <div class="project-links">
+                        <a href="sustainability-project.html" class="project-link">Sustainability Platform</a>
+                        <a href="migration-project.html" class="project-link">Migration Leadership</a>
+                        <a href="compliance-project.html" class="project-link">Compliance Suite</a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Win Section -->
-            <div class="content-section win-section" data-aos="fade-up" data-aos-delay="300">
-                <div class="content-header">
-                    <div class="content-icon win-icon emoji-icon">
-                        🎯
-                    </div>
-                    <h3 class="content-title">Business Impact</h3>
-                </div>
-                <p class="content-text">Transformed product development from assumption-based to evidence-based decision making, achieving 67% customer retention (vs 40% industry benchmark) as measured by annual subscription renewals by implementing systematic customer research that influenced $2.3M in feature investments and drove 85% of roadmap prioritization decisions, establishing reusable methodology now adopted company-wide across multiple product lines.</p>
-            </div>
-            
-            <!-- Other Projects Navigation -->
-            <div class="other-projects" data-aos="fade-up" data-aos-delay="400">
-                <h3>View Other Projects</h3>
-                <div class="project-links">
-                    <a href="sustainability-project.html" class="project-link">Sustainability Platform</a>
-                    <a href="migration-project.html" class="project-link">Migration Leadership</a>
-                    <a href="compliance-project.html" class="project-link">Compliance Suite</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'ease',
             once: true
         });
+
+        // Password protection logic
+        const PASSWORD = 'minjiangpm2025';
+        
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passwordInput = document.getElementById('password-input');
+            const errorMessage = document.getElementById('error-message');
+            const passwordScreen = document.getElementById('password-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            if (passwordInput.value === PASSWORD) {
+                // Correct password - show content with animation
+                passwordScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Re-initialize AOS for the newly shown content
+                AOS.refresh();
+                
+                // Store authentication in session
+                sessionStorage.setItem('researchProjectAccess', 'granted');
+            } else {
+                // Wrong password - show error
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Add shake animation to input
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        });
+
+        // Check if user already authenticated in this session
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('researchProjectAccess') === 'granted') {
+                document.getElementById('password-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        });
+
+        // Add shake animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
