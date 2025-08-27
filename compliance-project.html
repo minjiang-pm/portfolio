@@ -46,6 +46,128 @@
             padding: 0 20px;
         }
         
+        /* Password Protection Screen */
+        .password-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
+            padding: 20px;
+        }
+
+        .password-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(126, 34, 206, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 5px solid var(--locus-green);
+        }
+
+        .lock-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .password-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .password-subtitle {
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .password-form {
+            margin-bottom: 30px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--locus-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .password-submit {
+            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .password-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #dc2626;
+            display: none;
+        }
+
+        .back-to-portfolio {
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-portfolio:hover {
+            color: var(--locus-green);
+            transform: translateX(-3px);
+        }
+
+        /* Main Content (Hidden Initially) */
+        .main-content-wrapper {
+            display: none;
+        }
+        
         /* Header */
         header {
             background-color: white;
@@ -235,6 +357,12 @@
         .featured-media {
             grid-column: 1 / -1;
             min-height: 500px;
+        }
+        
+        .project-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         /* Content Sections - Minimal Text */
@@ -509,6 +637,21 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            .password-container {
+                padding: 30px;
+                margin: 20px;
+            }
+
+            .password-title {
+                font-size: 1.6rem;
+            }
+
+            .lock-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -572,159 +715,182 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Min Jiang</div>
-                <a href="index.html" class="back-button">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Portfolio
-                </a>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>From Idea to $1.2M: Perfect Product Launch</h1>
-                <div class="company-meta">Locus Technologies • 2017-2022</div>
-                
-                <div class="hero-metrics">
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
-                        <div class="metric-number">$1.2M</div>
-                        <div class="metric-label">New Revenue</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-label">Customer Renewal</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
-                        <div class="metric-number">4</div>
-                        <div class="metric-label">Products Launched</div>
-                    </div>
-                </div>
+    <!-- Password Protection Screen -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-container" data-aos="zoom-in">
+            <div class="lock-icon">
+                <i class="fas fa-lock"></i>
             </div>
-        </div>
-    </section>
-    
-    <!-- Media Gallery Section -->
-    <section class="media-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Product Development Showcase</h2>
-                <p class="section-subtitle">Visual demonstration of environmental compliance suite development</p>
+            <h1 class="password-title">Protected Content</h1>
+            <p class="password-subtitle">This project contains confidential client information. Please enter the access code to continue.</p>
+            
+            <form class="password-form" id="password-form">
+                <input type="password" id="password-input" class="password-input" placeholder="Enter access code" autocomplete="off">
+                <button type="submit" class="password-submit">
+                    <i class="fas fa-unlock-alt"></i> Access Project Details
+                </button>
+            </form>
+            
+            <div id="error-message" class="error-message">
+                <i class="fas fa-exclamation-triangle"></i> Incorrect access code. Please try again.
             </div>
             
-            <div class="media-grid">
-                <!-- Featured Product Demo -->
-                <div class="media-item featured-media" data-aos="fade-up">
-<!--                     <div class="media-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <h4>EHS Compliance Suite Demo</h4>
-                        <p>Interactive demonstration of the 4 out-of-the-box compliance products: Air Quality Monitoring, Water Discharge Reporting, Waste Management, and GHG Emissions tracking. Replace with actual product demo video.</p>
-                    </div> -->
-                     <video class="project-video" autoplay muted loop>
-                        <source src="Locus1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                
-                <!-- Product Architecture -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="media-placeholder">
-                        <i class="fas fa-sitemap"></i>
-                        <h4>Product Architecture Design</h4>
-                        <p>Technical documentation and system architecture diagrams showing integration capabilities and scalable design principles.</p>
-                    </div>
-                </div>
-                
-                <!-- Customer Success Metrics -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="media-placeholder">
-                        <i class="fas fa-chart-bar"></i>
-                        <h4>Revenue & Adoption Analytics</h4>
-                        <p>Charts showing $1.2M revenue growth, 100% customer renewal rates, and implementation time reduction from 6 months to 6 weeks.</p>
-                    </div>
-                </div>
-                
-                <!-- Go-to-Market Strategy -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="media-placeholder">
-                        <i class="fas fa-rocket"></i>
-                        <h4>Go-to-Market Framework</h4>
-                        <p>Strategic documentation of pricing models, customer segmentation, sales training materials, and market positioning strategy.</p>
-                    </div>
-                </div>
-            </div>
+            <a href="index.html#projects" class="back-to-portfolio">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
         </div>
-    </section>
-    
-    <!-- Company & Product Context Section -->
-    <section class="main-content">
-        <div class="container">
-            <div class="content-section context-section" data-aos="fade-up">
-                <div class="content-header">
-                    <div class="content-icon context-icon">
-                        🏢
-                    </div>
-                    <h3 class="content-title">Company & Product Context</h3>
-                </div>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>About Locus Technologies</h4>
-                        <p>Leading environmental software company providing cloud-based EHS (Environmental, Health & Safety) compliance solutions for industrial companies, manufacturing facilities, and government agencies worldwide.</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>The Product Challenge</h4>
-                        <p>Enterprise clients needed faster time-to-value compliance solutions that could handle common regulatory scenarios without extensive customization, reducing lengthy implementation cycles and high costs.</p>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="main-content-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">Min Jiang</div>
+                    <a href="index.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Portfolio
+                    </a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>From Idea to $1.2M: Perfect Product Launch</h1>
+                    <div class="company-meta">Locus Technologies • 2017-2022</div>
+                    
+                    <div class="hero-metrics">
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
+                            <div class="metric-number">$1.2M</div>
+                            <div class="metric-label">New Revenue</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
+                            <div class="metric-number">100%</div>
+                            <div class="metric-label">Customer Renewal</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
+                            <div class="metric-number">4</div>
+                            <div class="metric-label">Products Launched</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Challenge Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="100">
-                <div class="content-header">
-                    <div class="content-icon challenge-icon emoji-icon">
-                        ⚠️
-                    </div>
-                    <h3 class="content-title">The Challenge</h3>
+        </section>
+        
+        <!-- Media Gallery Section -->
+        <section class="media-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Product Development Showcase</h2>
+                    <p class="section-subtitle">Visual demonstration of environmental compliance suite development</p>
                 </div>
-                <p class="content-text">Enterprise clients were experiencing 6-month implementation delays and complex customization requirements, leading to frustrated customers and lost revenue opportunities. The market demanded faster deployment with proven ROI, while competitors gained advantage with pre-built solutions. Our custom implementation approach was exceeding budgets and timelines, creating customer churn risk.</p>
                 
-                <div class="stakeholder-quote">
-                    <blockquote>
-                        "Our implementation cycles were becoming unsustainable. Customers were choosing competitors with out-of-the-box solutions that could go live in weeks, not months."
-                    </blockquote>
-                    <cite>— VP Sales, Locus Technologies</cite>
+                <div class="media-grid">
+                    <!-- Featured Product Demo -->
+                    <div class="media-item featured-media" data-aos="fade-up">
+                         <video class="project-video" autoplay muted loop>
+                            <source src="Locus1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <!-- Product Architecture -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media-placeholder">
+                            <i class="fas fa-sitemap"></i>
+                            <h4>Product Architecture Design</h4>
+                            <p>Technical documentation and system architecture diagrams showing integration capabilities and scalable design principles.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Success Metrics -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="media-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Revenue & Adoption Analytics</h4>
+                            <p>Charts showing $1.2M revenue growth, 100% customer renewal rates, and implementation time reduction from 6 months to 6 weeks.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Go-to-Market Strategy -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="media-placeholder">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Go-to-Market Framework</h4>
+                            <p>Strategic documentation of pricing models, customer segmentation, sales training materials, and market positioning strategy.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Action Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="200">
-                <div class="content-header">
-                    <div class="content-icon action-icon emoji-icon">
-                        🚀
+        </section>
+        
+        <!-- Company & Product Context Section -->
+        <section class="main-content">
+            <div class="container">
+                <div class="content-section context-section" data-aos="fade-up">
+                    <div class="content-header">
+                        <div class="content-icon context-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="content-title">Company & Product Context</h3>
                     </div>
-                    <h3 class="content-title">My Action</h3>
+                    <div class="context-grid">
+                        <div class="context-item">
+                            <h4>About Locus Technologies</h4>
+                            <p>Leading environmental software company providing cloud-based EHS (Environmental, Health & Safety) compliance solutions for industrial companies, manufacturing facilities, and government agencies worldwide.</p>
+                        </div>
+                        <div class="context-item">
+                            <h4>The Product Challenge</h4>
+                            <p>Enterprise clients needed faster time-to-value compliance solutions that could handle common regulatory scenarios without extensive customization, reducing lengthy implementation cycles and high costs.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="content-text">Led end-to-end development of four comprehensive out-of-the-box compliance products from concept to market launch:</p>
-                <ul class="action-list">
-                    <li>Conducted market analysis across manufacturing, oil & gas, and utilities sectors to identify common compliance requirements</li>
-                    <li>Designed pre-configured modules for air quality monitoring, water discharge reporting, waste management, and GHG emissions tracking</li>
-                    <li>Collaborated with engineering teams to develop standardized workflows, automated data collection, and regulatory reporting templates</li>
-                    <li>Created comprehensive implementation guides, training materials, and customer onboarding processes for rapid deployment</li>
-                    <li>Established go-to-market strategy including competitive pricing models, sales team training, and customer communication plans</li>
-                    <li>Implemented customer feedback loops and agile iteration cycles to continuously improve product effectiveness</li>
-                    <li>Developed partnership strategy with regulatory consultants to enhance product credibility and extend market reach</li>
-                </ul>
                 
-                <div class="strategy-framework">
-                    <h4>Product Development Framework</h4>
-                    <ul>
-                        <li>Lean startup methodology with MVP testing and validation</li>
+                <!-- Challenge Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="content-header">
+                        <div class="content-icon challenge-icon emoji-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="content-title">The Challenge</h3>
+                    </div>
+                    <p class="content-text">Enterprise clients were experiencing 6-month implementation delays and complex customization requirements, leading to frustrated customers and lost revenue opportunities. The market demanded faster deployment with proven ROI, while competitors gained advantage with pre-built solutions. Our custom implementation approach was exceeding budgets and timelines, creating customer churn risk.</p>
+                    
+                    <div class="stakeholder-quote">
+                        <blockquote>
+                            "Our implementation cycles were becoming unsustainable. Customers were choosing competitors with out-of-the-box solutions that could go live in weeks, not months."
+                        </blockquote>
+                        <cite>— VP Sales, Locus Technologies</cite>
+                    </div>
+                </div>
+                
+                <!-- Action Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content-header">
+                        <div class="content-icon action-icon emoji-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="content-title">My Action</h3>
+                    </div>
+                    <p class="content-text">Led end-to-end development of four comprehensive out-of-the-box compliance products from concept to market launch:</p>
+                    <ul class="action-list">
+                        <li>Conducted market analysis across manufacturing, oil & gas, and utilities sectors to identify common compliance requirements</li>
+                        <li>Designed pre-configured modules for air quality monitoring, water discharge reporting, waste management, and GHG emissions tracking</li>
+                        <li>Collaborated with engineering teams to develop standardized workflows, automated data collection, and regulatory reporting templates</li>
+                        <li>Created comprehensive implementation guides, training materials, and customer onboarding processes for rapid deployment</li>
+                        <li>Established go-to-market strategy including competitive pricing models, sales team training, and customer communication plans</li>
+                        <li>Implemented customer feedback loops and agile iteration cycles to continuously improve product effectiveness</li>
+                        <li>Developed partnership strategy with regulatory consultants to enhance product credibility and extend market reach</li>
+                    </ul>
+                    
+                    <div class="strategy-framework">
+                        <h4>Product Development Framework</h4>
+                        <ul>
+                            <li>Lean startup methodology with MVP testing and validation</li>
                         <li>Agile development cycles with bi-weekly customer feedback integration</li>
                         <li>Design thinking approach for user experience optimization</li>
                         <li>Regulatory compliance research with industry experts and legal teams</li>
@@ -758,7 +924,7 @@
             <div class="content-section win-section" data-aos="fade-up" data-aos-delay="300">
                 <div class="content-header">
                     <div class="content-icon win-icon emoji-icon">
-                        🏆
+                        <i class="fas fa-trophy"></i>
                     </div>
                     <h3 class="content-title">The Win</h3>
                 </div>
@@ -776,14 +942,73 @@
             </div>
         </div>
     </section>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'ease',
             once: true
         });
+
+        // Password protection logic
+        const PASSWORD = 'minjiangpm2025';
+        
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passwordInput = document.getElementById('password-input');
+            const errorMessage = document.getElementById('error-message');
+            const passwordScreen = document.getElementById('password-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            if (passwordInput.value === PASSWORD) {
+                // Correct password - show content with animation
+                passwordScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Re-initialize AOS for the newly shown content
+                AOS.refresh();
+                
+                // Store authentication in session
+                sessionStorage.setItem('complianceProjectAccess', 'granted');
+            } else {
+                // Wrong password - show error
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Add shake animation to input
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        });
+
+        // Check if user already authenticated in this session
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('complianceProjectAccess') === 'granted') {
+                document.getElementById('password-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        });
+
+        // Add shake animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
