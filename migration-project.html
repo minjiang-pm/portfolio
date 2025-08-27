@@ -44,6 +44,128 @@
             padding: 0 20px;
         }
         
+        /* Password Protection Screen */
+        .password-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
+            padding: 20px;
+        }
+
+        .password-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(126, 34, 206, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 5px solid var(--primary);
+        }
+
+        .lock-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .password-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .password-subtitle {
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .password-form {
+            margin-bottom: 30px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.1);
+        }
+
+        .password-submit {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .password-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #dc2626;
+            display: none;
+        }
+
+        .back-to-portfolio {
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-portfolio:hover {
+            color: var(--primary);
+            transform: translateX(-3px);
+        }
+
+        /* Main Content (Hidden Initially) */
+        .main-content-wrapper {
+            display: none;
+        }
+        
         /* Header */
         header {
             background-color: white;
@@ -458,6 +580,21 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            .password-container {
+                padding: 30px;
+                margin: 20px;
+            }
+
+            .password-title {
+                font-size: 1.6rem;
+            }
+
+            .lock-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -520,192 +657,279 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Min Jiang</div>
-                <a href="index.html" class="back-button">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Portfolio
-                </a>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Leading 500+ Customers Through Complex Migration</h1>
-                <div class="company-meta">UL Solutions • 2023-2024</div>
-                
-                <div class="hero-metrics">
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
-                        <div class="metric-number">42+</div>
-                        <div class="metric-label">Weeks Saved</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
-                        <div class="metric-number">95%</div>
-                        <div class="metric-label">Customer Retention</div>
-                    </div>
-                    <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
-                        <div class="metric-number">$2.3M</div>
-                        <div class="metric-label">Cost Savings</div>
-                    </div>
-                </div>
+    <!-- Password Protection Screen -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-container" data-aos="zoom-in">
+            <div class="lock-icon">
+                <i class="fas fa-lock"></i>
             </div>
-        </div>
-    </section>
-    
-    <!-- Media Gallery Section -->
-    <section class="media-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Migration Leadership Showcase</h2>
-                <p class="section-subtitle">Visual demonstration of project management and execution</p>
+            <h1 class="password-title">Protected Content</h1>
+            <p class="password-subtitle">This project contains confidential client information. Please enter the access code to continue.</p>
+            
+            <form class="password-form" id="password-form">
+                <input type="password" id="password-input" class="password-input" placeholder="Enter access code" autocomplete="off">
+                <button type="submit" class="password-submit">
+                    <i class="fas fa-unlock-alt"></i> Access Project Details
+                </button>
+            </form>
+            
+            <div id="error-message" class="error-message">
+                <i class="fas fa-exclamation-triangle"></i> Incorrect access code. Please try again.
             </div>
             
-            <div class="media-grid">
-                <!-- Featured Migration Dashboard -->
-                <div class="media-item featured-media" data-aos="fade-up">
-                    <div class="media-placeholder">
-                        <i class="fas fa-chart-gantt"></i>
-                        <h4>Migration Project Dashboard</h4>
-                        <p>Real-time tracking of 500+ customer migrations with progress analytics, risk assessments, and team coordination tools. Replace with actual project management dashboard.</p>
-                    </div>
-                </div>
-                
-                <!-- Team Coordination Process -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="media-placeholder">
-                        <i class="fas fa-users-cog"></i>
-                        <h4>Tiger Team Coordination</h4>
-                        <p>Cross-functional team meetings and strategic planning sessions. Add photos/videos of team collaboration and decision-making processes.</p>
-                    </div>
-                </div>
-                
-                <!-- Migration Timeline & Results -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="media-placeholder">
-                        <i class="fas fa-clock"></i>
-                        <h4>Timeline Optimization Results</h4>
-                        <p>Before/after timeline comparisons showing 42+ weeks saved through systematic approach and process improvements.</p>
-                    </div>
-                </div>
-                
-                <!-- Customer Success Metrics -->
-                <div class="media-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="media-placeholder">
-                        <i class="fas fa-heart"></i>
-                        <h4>Customer Retention Analytics</h4>
-                        <p>95% retention rate achievements and customer satisfaction improvements throughout the migration process.</p>
-                    </div>
-                </div>
-            </div>
+            <a href="index.html#projects" class="back-to-portfolio">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
         </div>
-    </section>
-    
-    <!-- Company & Product Context Section -->
-    <section class="main-content">
-        <div class="container">
-            <div class="content-section context-section" data-aos="fade-up">
-                <div class="content-header">
-                    <div class="content-icon context-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="content-title">Company & Product Context</h3>
-                </div>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>About UL Solutions</h4>
-                        <p>Global leader in applied safety science, serving Fortune 500 companies with compliance, testing, and certification solutions across multiple industries.</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>The Migration Challenge</h4>
-                        <p>Transitioning 500+ enterprise customers from legacy OHM (Occupational Health Manager) to modern OHS (Occupational Health & Safety) platform while maintaining business continuity.</p>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="main-content-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">Min Jiang</div>
+                    <a href="index.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Portfolio
+                    </a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Leading 500+ Customers Through Complex Migration</h1>
+                    <div class="company-meta">UL Solutions • 2023-2024</div>
+                    
+                    <div class="hero-metrics">
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="100">
+                            <div class="metric-number">42+</div>
+                            <div class="metric-label">Weeks Saved</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="200">
+                            <div class="metric-number">95%</div>
+                            <div class="metric-label">Customer Retention</div>
+                        </div>
+                        <div class="hero-metric" data-aos="fade-up" data-aos-delay="300">
+                            <div class="metric-number">$2.3M</div>
+                            <div class="metric-label">Cost Savings</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Challenge Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="100">
-                <div class="content-header">
-                    <div class="content-icon challenge-icon">
-                        <i class="fas fa-target"></i>
-                    </div>
-                    <h3 class="content-title">The Challenge</h3>
+        </section>
+        
+        <!-- Media Gallery Section -->
+        <section class="media-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Migration Leadership Showcase</h2>
+                    <p class="section-subtitle">Visual demonstration of project management and execution</p>
                 </div>
-                <p class="content-text">High-risk migration of 500+ enterprise customers from legacy platform with significant potential for customer churn and revenue loss. Previous industry migrations typically resulted in 20-30% customer losses. The complex data structures, diverse customer configurations, and critical business processes couldn't afford downtime, creating a make-or-break situation for the company.</p>
                 
-                <div class="stakeholder-quote">
-                    <blockquote>
-                        "This migration represented our biggest operational risk of the year. Failure could have cost us $15M+ in customer churn and damaged our market reputation permanently."
-                    </blockquote>
-                    <cite>— Chief Operating Officer, UL Solutions</cite>
+                <div class="media-grid">
+                    <!-- Featured Migration Dashboard -->
+                    <div class="media-item featured-media" data-aos="fade-up">
+                        <div class="media-placeholder">
+                            <i class="fas fa-chart-gantt"></i>
+                            <h4>Migration Project Dashboard</h4>
+                            <p>Real-time tracking of 500+ customer migrations with progress analytics, risk assessments, and team coordination tools. Replace with actual project management dashboard.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Coordination Process -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media-placeholder">
+                            <i class="fas fa-users-cog"></i>
+                            <h4>Tiger Team Coordination</h4>
+                            <p>Cross-functional team meetings and strategic planning sessions. Add photos/videos of team collaboration and decision-making processes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Migration Timeline & Results -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="media-placeholder">
+                            <i class="fas fa-clock"></i>
+                            <h4>Timeline Optimization Results</h4>
+                            <p>Before/after timeline comparisons showing 42+ weeks saved through systematic approach and process improvements.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Success Metrics -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="media-placeholder">
+                            <i class="fas fa-heart"></i>
+                            <h4>Customer Retention Analytics</h4>
+                            <p>95% retention rate achievements and customer satisfaction improvements throughout the migration process.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Action Section -->
-            <div class="content-section" data-aos="fade-up" data-aos-delay="200">
-                <div class="content-header">
-                    <div class="content-icon action-icon">
-                        <i class="fas fa-rocket"></i>
+        </section>
+        
+        <!-- Company & Product Context Section -->
+        <section class="main-content">
+            <div class="container">
+                <div class="content-section context-section" data-aos="fade-up">
+                    <div class="content-header">
+                        <div class="content-icon context-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="content-title">Company & Product Context</h3>
                     </div>
-                    <h3 class="content-title">My Action</h3>
+                    <div class="context-grid">
+                        <div class="context-item">
+                            <h4>About UL Solutions</h4>
+                            <p>Global leader in applied safety science, serving Fortune 500 companies with compliance, testing, and certification solutions across multiple industries.</p>
+                        </div>
+                        <div class="context-item">
+                            <h4>The Migration Challenge</h4>
+                            <p>Transitioning 500+ enterprise customers from legacy OHM (Occupational Health Manager) to modern OHS (Occupational Health & Safety) platform while maintaining business continuity.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="content-text">Assembled and led a 7-member cross-functional tiger team to execute systematic migration strategy:</p>
-                <ul class="action-list">
-                    <li>Conducted comprehensive database analysis mapping data structures across 500+ customer accounts</li>
-                    <li>Developed 15 strategic migration solutions addressing unique customer configurations and business requirements</li>
-                    <li>Created risk assessment frameworks and contingency plans for high-value customer accounts</li>
-                    <li>Coordinated with engineering, customer success, sales, and support teams for seamless execution</li>
-                    <li>Established customer communication strategies and training materials for smooth transitions</li>
-                    <li>Implemented progress tracking systems and success metrics to monitor migration effectiveness</li>
-                    <li>Built customer feedback loops to address issues quickly and maintain satisfaction levels</li>
-                </ul>
                 
-                <div class="strategy-framework">
-                    <h4>Strategic Framework Used</h4>
-                    <ul>
-                        <li>Agile project management with 2-week sprint cycles</li>
-                        <li>Risk-based customer segmentation and prioritization</li>
-                        <li>Cross-functional RACI matrix for clear accountability</li>
-                        <li>Customer journey mapping for transition experience optimization</li>
+                <!-- Challenge Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="content-header">
+                        <div class="content-icon challenge-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="content-title">The Challenge</h3>
+                    </div>
+                    <p class="content-text">High-risk migration of 500+ enterprise customers from legacy platform with significant potential for customer churn and revenue loss. Previous industry migrations typically resulted in 20-30% customer losses. The complex data structures, diverse customer configurations, and critical business processes couldn't afford downtime, creating a make-or-break situation for the company.</p>
+                    
+                    <div class="stakeholder-quote">
+                        <blockquote>
+                            "This migration represented our biggest operational risk of the year. Failure could have cost us $15M+ in customer churn and damaged our market reputation permanently."
+                        </blockquote>
+                        <cite>— Chief Operating Officer, UL Solutions</cite>
+                    </div>
+                </div>
+                
+                <!-- Action Section -->
+                <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content-header">
+                        <div class="content-icon action-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="content-title">My Action</h3>
+                    </div>
+                    <p class="content-text">Assembled and led a 7-member cross-functional tiger team to execute systematic migration strategy:</p>
+                    <ul class="action-list">
+                        <li>Conducted comprehensive database analysis mapping data structures across 500+ customer accounts</li>
+                        <li>Developed 15 strategic migration solutions addressing unique customer configurations and business requirements</li>
+                        <li>Created risk assessment frameworks and contingency plans for high-value customer accounts</li>
+                        <li>Coordinated with engineering, customer success, sales, and support teams for seamless execution</li>
+                        <li>Established customer communication strategies and training materials for smooth transitions</li>
+                        <li>Implemented progress tracking systems and success metrics to monitor migration effectiveness</li>
+                        <li>Built customer feedback loops to address issues quickly and maintain satisfaction levels</li>
                     </ul>
-                </div>
-            </div>
-            
-            <!-- Win Section -->
-            <div class="content-section win-section" data-aos="fade-up" data-aos-delay="300">
-                <div class="content-header">
-                    <div class="content-icon win-icon">
-                        <i class="fas fa-trophy"></i>
+                    
+                    <div class="strategy-framework">
+                        <h4>Strategic Framework Used</h4>
+                        <ul>
+                            <li>Agile project management with 2-week sprint cycles</li>
+                            <li>Risk-based customer segmentation and prioritization</li>
+                            <li>Cross-functional RACI matrix for clear accountability</li>
+                            <li>Customer journey mapping for transition experience optimization</li>
+                        </ul>
                     </div>
-                    <h3 class="content-title">The Win</h3>
                 </div>
-                <p class="content-text">42+ weeks saved with 95% customer retention rate, exceeding all project expectations and industry benchmarks. Generated $2.3M in operational cost savings while establishing a reusable migration playbook for future transitions. The systematic approach reduced customer support tickets by 35% and improved overall customer satisfaction during the transition period.</p>
-            </div>
-            
-            <!-- Other Projects Navigation -->
-            <div class="other-projects" data-aos="fade-up" data-aos-delay="400">
-                <h3>View Other Projects</h3>
-                <div class="project-links">
-                    <a href="sustainability-project.html" class="project-link">Sustainability Platform</a>
-                    <a href="research-project.html" class="project-link">Customer Research</a>
-                    <a href="compliance-project.html" class="project-link">Compliance Suite</a>
+                
+                <!-- Win Section -->
+                <div class="content-section win-section" data-aos="fade-up" data-aos-delay="300">
+                    <div class="content-header">
+                        <div class="content-icon win-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="content-title">The Win</h3>
+                    </div>
+                    <p class="content-text">42+ weeks saved with 95% customer retention rate, exceeding all project expectations and industry benchmarks. Generated $2.3M in operational cost savings while establishing a reusable migration playbook for future transitions. The systematic approach reduced customer support tickets by 35% and improved overall customer satisfaction during the transition period.</p>
+                </div>
+                
+                <!-- Other Projects Navigation -->
+                <div class="other-projects" data-aos="fade-up" data-aos-delay="400">
+                    <h3>View Other Projects</h3>
+                    <div class="project-links">
+                        <a href="sustainability-project.html" class="project-link">Sustainability Platform</a>
+                        <a href="research-project.html" class="project-link">Customer Research</a>
+                        <a href="compliance-project.html" class="project-link">Compliance Suite</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'ease',
             once: true
         });
+
+        // Password protection logic
+        const PASSWORD = 'minjiangpm2025';
+        
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passwordInput = document.getElementById('password-input');
+            const errorMessage = document.getElementById('error-message');
+            const passwordScreen = document.getElementById('password-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            if (passwordInput.value === PASSWORD) {
+                // Correct password - show content with animation
+                passwordScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Re-initialize AOS for the newly shown content
+                AOS.refresh();
+                
+                // Store authentication in session
+                sessionStorage.setItem('migrationProjectAccess', 'granted');
+            } else {
+                // Wrong password - show error
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Add shake animation to input
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        });
+
+        // Check if user already authenticated in this session
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('migrationProjectAccess') === 'granted') {
+                document.getElementById('password-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        });
+
+        // Add shake animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
