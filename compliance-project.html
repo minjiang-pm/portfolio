@@ -550,6 +550,16 @@
             border-bottom: 1px solid #e2e8f0;
         }
         
+        /* Adjust height for employee card (2nd card) */
+        .work-sample-card:nth-child(2) .sample-image {
+            height: 350px;
+        }
+        
+        /* Last card (slideshow) takes full width */
+        .work-sample-card:last-child {
+            grid-column: 1 / -1;
+        }
+        
         .sample-video {
             width: 100%;
             height: 280px;
@@ -1008,6 +1018,7 @@
                     <a href="#samples" class="quick-nav-link"><i class="fas fa-layer-group"></i> Work Samples</a>
                     <a href="#role" class="quick-nav-link"><i class="fas fa-lightbulb"></i> Eng → PM Journey</a>
                     <a href="#results" class="quick-nav-link"><i class="fas fa-award"></i> Key Skills</a>
+                    <a href="#recognition" class="quick-nav-link"><i class="fas fa-star"></i> Recognition</a>
                 </div>
             </div>
         </div>
@@ -1098,8 +1109,8 @@
                     
                     <!-- Agile & Release Management -->
                     <div class="work-sample-card" data-aos="fade-up" data-aos-delay="150">
-                        <div class="sample-image">
-                            <i class="fas fa-sync-alt"></i>
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="employee.jpg" alt="Release & Enhancement Schedules" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
                         </div>
                         <div class="sample-content">
                             <span class="sample-tag">Agile Practices</span>
@@ -1108,22 +1119,22 @@
                         </div>
                     </div>
                     
-                    <!-- Customer Success -->
+                    <!-- Complex Implementation -->
                     <div class="work-sample-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="sample-image">
-                            <i class="fas fa-chalkboard-teacher"></i>
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="hbws-workflow.png" alt="HBWS Complex Workflow Implementation" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
                         </div>
                         <div class="sample-content">
-                            <span class="sample-tag">Customer Enablement</span>
-                            <h4>User Training & Documentation</h4>
-                            <p>Created comprehensive user training programs and documentation for sustainability applications. Ensured successful customer onboarding and product adoption across enterprise accounts.</p>
+                            <span class="sample-tag">Enterprise Implementation</span>
+                            <h4>Complex Workflow Implementation</h4>
+                            <p>Led implementation for key enterprise customers with highly complex workflows. Designed and deployed multi-step processes including field data collection, lab QC, sample analysis, and regulatory reporting - ensuring seamless integration with existing systems.</p>
                         </div>
                     </div>
                     
                     <!-- Sustainability Focus -->
                     <div class="work-sample-card" data-aos="fade-up" data-aos-delay="250">
-                        <div class="sample-image">
-                            <i class="fas fa-leaf"></i>
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="esg reporting.png" alt="ESG Reporting" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
                         </div>
                         <div class="sample-content">
                             <span class="sample-tag">Domain Expertise</span>
@@ -1132,10 +1143,27 @@
                         </div>
                     </div>
                     
-                    <!-- Technical Foundation -->
+                    <!-- Technical Foundation with Auto-Slideshow -->
                     <div class="work-sample-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="sample-image">
-                            <i class="fas fa-code-branch"></i>
+                        <div class="sample-image slideshow-container" style="padding: 0; overflow: hidden; position: relative; cursor: pointer;" onclick="zoomImage(this)">
+                            <img src="facility-mgmt-1.png" alt="Facility Management Interface" class="slideshow-image active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.8s ease;">
+                            <img src="facility-mgmt-2.png" alt="Facility Management Dashboard" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="orbis-device-mgt.png" alt="Orbis Device Management" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="orbis-gis.png" alt="Orbis GIS" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="akrr-incident.png" alt="AKRR Incident Analytics" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="facility-charts.png" alt="Facility Dashboard Charts" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="facility-dashboard.png" alt="Facility Management Dashboard" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            
+                            <!-- Slideshow indicators -->
+                            <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+                                <span class="slide-dot active" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.8; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                            </div>
                         </div>
                         <div class="sample-content">
                             <span class="sample-tag">Technical Background</span>
@@ -1268,6 +1296,99 @@
                 </div>
             </div>
         </section>
+
+        <!-- Impact & Recognition Section -->
+        <section id="recognition" style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.03), rgba(168, 85, 247, 0.02)); padding: 60px 0;">
+            <div class="container">
+                <div class="section-label">Impact & Recognition</div>
+                <h2>What People Say About My Work</h2>
+                <p style="max-width: 800px; margin-bottom: 40px; color: var(--text-medium); font-size: 1.05rem;">
+                    Real feedback from senior leaders and stakeholders on high-impact product work.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; margin-top: 40px;">
+                    
+                    <!-- Testimonial 1: Locus Technologies -->
+                    <div data-aos="fade-up" style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #10b981; position: relative;">
+                        <div style="position: absolute; top: 35px; right: 35px; font-size: 3rem; color: rgba(16, 185, 129, 0.15); line-height: 1;">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <span style="display: inline-block; background: #10b981; color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Locus Technologies
+                            </span>
+                        </div>
+                        
+                        <h4 style="font-size: 1.35rem; font-weight: 700; color: var(--text-dark); margin: 0 0 20px 0; line-height: 1.35;">
+                            High-Stakes Client Demo
+                        </h4>
+                        
+                        <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.75; margin: 0 0 25px 0; font-style: italic;">
+                            "Min did an <strong style="color: #7e22ce;">outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong style="color: #7e22ce;">made Locus look very good</strong>."
+                        </p>
+                        
+                        <div style="border-top: 2px solid #f1f5f9; padding-top: 20px;">
+                            <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--text-dark); font-size: 1rem;">
+                                Marian Carr
+                            </p>
+                            <p style="margin: 0 0 16px 0; color: var(--text-medium); font-size: 0.95rem;">
+                                Senior Manager, Locus Technologies
+                            </p>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Executive Communication</span>
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Product Presentation</span>
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Client Relations</span>
+                            </div>
+                        </div>
+                        
+                        <p style="margin: 20px 0 0 0; padding: 16px; background: rgba(16, 185, 129, 0.05); border-radius: 10px; font-size: 0.95rem; color: var(--text-dark); line-height: 1.6;">
+                            <strong style="color: #10b981;">Context:</strong> Delivered product demo and stakeholder presentation to Fortune 500 prospect's executive team, showcasing AI-powered sustainability platform capabilities.
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 2: UL Solutions -->
+                    <div data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #3b82f6; position: relative;">
+                        <div style="position: absolute; top: 35px; right: 35px; font-size: 3rem; color: rgba(59, 130, 246, 0.15); line-height: 1;">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <span style="display: inline-block; background: #3b82f6; color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+                                UL Solutions
+                            </span>
+                        </div>
+                        
+                        <h4 style="font-size: 1.35rem; font-weight: 700; color: var(--text-dark); margin: 0 0 20px 0; line-height: 1.35;">
+                            VP-Level Strategy Session
+                        </h4>
+                        
+                        <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.75; margin: 0 0 25px 0; font-style: italic;">
+                            "Min presented strategic insights and asked <strong style="color: #7e22ce;">compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong style="color: #7e22ce;">prioritize high-impact initiatives</strong> for maximum business value."
+                        </p>
+                        
+                        <div style="border-top: 2px solid #f1f5f9; padding-top: 20px;">
+                            <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--text-dark); font-size: 1rem;">
+                                VP Product Strategy
+                            </p>
+                            <p style="margin: 0 0 16px 0; color: var(--text-medium); font-size: 0.95rem;">
+                                Product Strategy Session, UL Solutions
+                            </p>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Executive Communication</span>
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Strategic Planning</span>
+                                <span style="background: rgba(126, 34, 206, 0.08); color: #7e22ce; padding: 5px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Product Roadmapping</span>
+                            </div>
+                        </div>
+                        
+                        <p style="margin: 20px 0 0 0; padding: 16px; background: rgba(59, 130, 246, 0.05); border-radius: 10px; font-size: 0.95rem; color: var(--text-dark); line-height: 1.6;">
+                            <strong style="color: #3b82f6;">Context:</strong> Led quarterly product strategy session with VP and cross-functional leaders, using data analysis to reprioritize roadmap and focus resources on high-ROI features.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         
         <!-- Other Projects Navigation -->
         <section class="other-projects">
@@ -1346,8 +1467,126 @@
                 25% { transform: translateX(-5px); }
                 75% { transform: translateX(5px); }
             }
+            
+            /* Zoom modal styles */
+            .zoom-modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 9999;
+                cursor: zoom-out;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .zoom-modal.active {
+                display: flex;
+            }
+            
+            .zoom-modal img {
+                max-width: 95%;
+                max-height: 95%;
+                object-fit: contain;
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            }
+            
+            .zoom-close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 10000;
+            }
+            
+            .zoom-close:hover {
+                color: #a855f7;
+            }
         `;
         document.head.appendChild(style);
+        
+        // Zoom image function
+        function zoomImage(element) {
+            const img = element.querySelector('img');
+            const modal = document.createElement('div');
+            modal.className = 'zoom-modal active';
+            modal.innerHTML = `
+                <span class="zoom-close" onclick="this.parentElement.remove()">&times;</span>
+                <img src="${img.src}" alt="${img.alt}">
+            `;
+            modal.onclick = function(e) {
+                if (e.target === modal || e.target.className === 'zoom-close') {
+                    modal.remove();
+                }
+            };
+            document.body.appendChild(modal);
+        }
+        
+        // Make zoom function global
+        window.zoomImage = zoomImage;
+        
+        // Auto-slideshow for dashboard images
+        (function() {
+            const containers = document.querySelectorAll('.slideshow-container');
+            
+            containers.forEach(container => {
+                const images = container.querySelectorAll('.slideshow-image');
+                const dots = container.querySelectorAll('.slide-dot');
+                let currentIndex = 0;
+                
+                function showSlide(index) {
+                    // Hide all images
+                    images.forEach(img => {
+                        img.style.opacity = '0';
+                        img.classList.remove('active');
+                    });
+                    
+                    // Update dots
+                    dots.forEach(dot => {
+                        dot.style.opacity = '0.4';
+                        dot.classList.remove('active');
+                    });
+                    
+                    // Show current image
+                    if (images[index]) {
+                        images[index].style.opacity = '1';
+                        images[index].classList.add('active');
+                    }
+                    
+                    // Update current dot
+                    if (dots[index]) {
+                        dots[index].style.opacity = '0.8';
+                        dots[index].classList.add('active');
+                    }
+                }
+                
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Auto-play every 3 seconds
+                setInterval(nextSlide, 3000);
+                
+                // Click dots to jump to specific slide
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent zoom when clicking dots
+                        currentIndex = index;
+                        showSlide(currentIndex);
+                    });
+                });
+                
+                // Initialize first slide
+                showSlide(0);
+            });
+        })();
     </script>
 </body>
 </html>
