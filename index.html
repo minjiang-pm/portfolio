@@ -1175,7 +1175,7 @@
             <div style="position: relative; max-width: 900px; margin: 50px auto 0;">
                 
                 <!-- Testimonial 1: Marian Carr -->
-                <div class="testimonial-slide active">
+                <div class="testimonial-slide" style="display: block;">
                     <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
                         <!-- Avatar Image -->
                         <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
@@ -1377,26 +1377,20 @@
         </style>
 
         <script>
-            // Wait for DOM to be fully loaded
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('=== Testimonial Carousel Initializing ===');
-                
+            // Simplified carousel with inline display
+            (function() {
                 let currentSlide = 0;
                 const slides = document.querySelectorAll('.testimonial-slide');
                 const dots = document.querySelectorAll('.testimonial-dot');
                 let autoPlayInterval;
 
-                console.log('Found slides:', slides.length);
-                console.log('Found dots:', dots.length);
-                
-                // Force show first slide immediately
-                if (slides.length > 0) {
-                    slides[0].style.display = 'block';
-                    slides[0].classList.add('active');
-                    console.log('First slide force displayed');
-                }
+                console.log('=== Carousel Init ===');
+                console.log('Slides found:', slides.length);
+                console.log('Dots found:', dots.length);
 
-                function showTestimonial(n) {
+                function showSlide(n) {
+                    if (slides.length === 0) return;
+                    
                     // Loop around
                     if (n >= slides.length) currentSlide = 0;
                     else if (n < 0) currentSlide = slides.length - 1;
@@ -1404,65 +1398,42 @@
 
                     console.log('Showing slide:', currentSlide);
 
-                    // Hide all slides
-                    slides.forEach((slide, index) => {
-                        slide.classList.remove('active');
-                        slide.style.display = 'none';
-                        console.log('Hiding slide', index);
+                    // Hide all, show current
+                    slides.forEach((slide, i) => {
+                        slide.style.display = (i === currentSlide) ? 'block' : 'none';
                     });
 
-                    // Show current slide
-                    if (slides[currentSlide]) {
-                        slides[currentSlide].classList.add('active');
-                        slides[currentSlide].style.display = 'block';
-                        console.log('Displaying slide', currentSlide);
-                    }
-
                     // Update dots
-                    dots.forEach((dot, index) => {
-                        dot.classList.remove('active');
-                        dot.style.background = '#cbd5e1';
-                        dot.style.width = '12px';
-                        dot.style.borderRadius = '50%';
-                        if (index === currentSlide) {
-                            dot.classList.add('active');
+                    dots.forEach((dot, i) => {
+                        if (i === currentSlide) {
                             dot.style.background = '#7e22ce';
                             dot.style.width = '32px';
                             dot.style.borderRadius = '6px';
+                        } else {
+                            dot.style.background = '#cbd5e1';
+                            dot.style.width = '12px';
+                            dot.style.borderRadius = '50%';
                         }
                     });
                 }
 
-                window.changeTestimonial = function(direction) {
-                    console.log('Change testimonial:', direction);
-                    showTestimonial(currentSlide + direction);
-                    resetAutoPlay();
-                }
+                window.changeTestimonial = function(dir) {
+                    showSlide(currentSlide + dir);
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+                };
 
                 window.currentTestimonial = function(n) {
-                    console.log('Go to testimonial:', n);
-                    showTestimonial(n);
-                    resetAutoPlay();
-                }
-
-                function autoPlay() {
-                    showTestimonial(currentSlide + 1);
-                }
-
-                function resetAutoPlay() {
+                    showSlide(n);
                     clearInterval(autoPlayInterval);
-                    autoPlayInterval = setInterval(autoPlay, 6000);
-                }
+                    autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+                };
 
-                // Initialize - show first slide immediately
-                if (slides.length > 0) {
-                    showTestimonial(0);
-                    autoPlayInterval = setInterval(autoPlay, 6000);
-                    console.log('Carousel initialized successfully');
-                } else {
-                    console.error('No testimonial slides found!');
-                }
-            });
+                // Start
+                showSlide(0);
+                autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+                console.log('Carousel started');
+            })();
         </script>
     </section>
     
