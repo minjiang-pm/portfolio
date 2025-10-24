@@ -294,7 +294,7 @@
         
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1200px;  /* Same as main page */
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -1093,6 +1093,13 @@
                 gap: 25px;
             }
         }
+
+.project-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
     </style>
 </head>
 <body>
@@ -1102,9 +1109,9 @@
             <nav>
                 <div class="logo">Min Jiang</div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#timeline">My Story</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#testimonials">Impact</a></li>
+                    <li><a href="#timeline">My Story</a></li>
                     <li><a href="#projects">Portfolio</a></li>
                     <li><a href="#contact" class="cta-button">Let's chat</a></li>
                 </ul>
@@ -1154,6 +1161,309 @@
                 <img src="Min.jpg" alt="Min Jiang - Product Leader">
             </div>
         </div>
+    </section>
+
+    <!-- Impact & Recognition Section -->
+    <section id="testimonials" class="section testimonials-section" style="background: #f8fafc; padding: 70px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Impact & Recognition</h2>
+                <p style="font-size: 1.05rem; max-width: 700px; margin: 0 auto; color: var(--secondary);">Real feedback from senior leaders and stakeholders</p>
+            </div>
+            
+            <!-- Rotating Testimonial Carousel -->
+            <div style="position: relative; max-width: 900px; margin: 50px auto 0;">
+                
+                <!-- Testimonial 1: Marian Carr -->
+                <div class="testimonial-slide active">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            <img src="Marian.jpg" alt="Marian Carr" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min did an <strong>outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong>made Locus look very good</strong>."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Marian Carr</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Senior Vice President, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Fortune 500 Executive Demo
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Context:</strong> Delivered product demo to Fortune 500 prospect's executive team
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Executive Communication</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Product Demo</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Client Relations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2: VP Product Strategy -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #2563eb); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; border: 4px solid #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);">
+                            VP
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min presented strategic insights and asked <strong>compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong>prioritize high-impact initiatives</strong> for maximum business value."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">VP Product Strategy</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Strategy Session, UL Solutions</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Shaped Product Roadmap
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #2563eb;">Context:</strong> Led quarterly strategy session with VP and cross-functional leaders
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Strategic Planning</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Data Analysis</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Roadmapping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3: Enterprise Customer -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            EC
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min <strong>quickly built a demo dashboard</strong> during training that was remarkably close to our requirements. Her ability to <strong>rapidly translate needs into working solutions</strong> was impressive."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Enterprise Customer</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Training Session, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Rapid Solution Delivery
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Context:</strong> Built custom dashboard prototype during on-site customer training
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Rapid Prototyping</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Technical Agility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4: Jennifer Peterson -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            <img src="Jennifer.jpg" alt="Jennifer Peterson" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Thanks so much for <strong>pushing this through and helping the customer out</strong>. They will no doubt appreciate your efforts."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Jennifer Peterson</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Vice President of Commercial Project Management/Implementations, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Customer Success Under Pressure
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Context:</strong> Coordinated cross-functional delivery to meet critical customer deadline
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Customer Advocacy</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 35px;">
+                    <button class="testimonial-dot active" onclick="currentTestimonial(0)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #7e22ce; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(1)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(2)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(3)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button onclick="changeTestimonial(-1)" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #e2e8f0; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #64748b; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="changeTestimonial(1)" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #e2e8f0; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #64748b; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <style>
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .testimonial-slide {
+                display: none;
+                animation: fadeIn 0.6s ease-in;
+            }
+            
+            .testimonial-slide.active {
+                display: block !important;
+            }
+            
+            .testimonial-dot:hover {
+                background: #a855f7 !important;
+                transform: scale(1.2);
+            }
+            
+            .testimonial-dot.active {
+                background: #7e22ce !important;
+                width: 32px !important;
+                border-radius: 6px !important;
+            }
+            
+            button[onclick^="changeTestimonial"]:hover {
+                background: #7e22ce !important;
+                color: white !important;
+                border-color: #7e22ce !important;
+                transform: translateY(-50%) scale(1.1);
+            }
+        </style>
+
+        <script>
+            // Wait for DOM to be fully loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('=== Testimonial Carousel Initializing ===');
+                
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.testimonial-slide');
+                const dots = document.querySelectorAll('.testimonial-dot');
+                let autoPlayInterval;
+
+                console.log('Found slides:', slides.length);
+                console.log('Found dots:', dots.length);
+                
+                // Force show first slide immediately
+                if (slides.length > 0) {
+                    slides[0].style.display = 'block';
+                    slides[0].classList.add('active');
+                    console.log('First slide force displayed');
+                }
+
+                function showTestimonial(n) {
+                    // Loop around
+                    if (n >= slides.length) currentSlide = 0;
+                    else if (n < 0) currentSlide = slides.length - 1;
+                    else currentSlide = n;
+
+                    console.log('Showing slide:', currentSlide);
+
+                    // Hide all slides
+                    slides.forEach((slide, index) => {
+                        slide.classList.remove('active');
+                        slide.style.display = 'none';
+                        console.log('Hiding slide', index);
+                    });
+
+                    // Show current slide
+                    if (slides[currentSlide]) {
+                        slides[currentSlide].classList.add('active');
+                        slides[currentSlide].style.display = 'block';
+                        console.log('Displaying slide', currentSlide);
+                    }
+
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        dot.classList.remove('active');
+                        dot.style.background = '#cbd5e1';
+                        dot.style.width = '12px';
+                        dot.style.borderRadius = '50%';
+                        if (index === currentSlide) {
+                            dot.classList.add('active');
+                            dot.style.background = '#7e22ce';
+                            dot.style.width = '32px';
+                            dot.style.borderRadius = '6px';
+                        }
+                    });
+                }
+
+                window.changeTestimonial = function(direction) {
+                    console.log('Change testimonial:', direction);
+                    showTestimonial(currentSlide + direction);
+                    resetAutoPlay();
+                }
+
+                window.currentTestimonial = function(n) {
+                    console.log('Go to testimonial:', n);
+                    showTestimonial(n);
+                    resetAutoPlay();
+                }
+
+                function autoPlay() {
+                    showTestimonial(currentSlide + 1);
+                }
+
+                function resetAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = setInterval(autoPlay, 6000);
+                }
+
+                // Initialize - show first slide immediately
+                if (slides.length > 0) {
+                    showTestimonial(0);
+                    autoPlayInterval = setInterval(autoPlay, 6000);
+                    console.log('Carousel initialized successfully');
+                } else {
+                    console.error('No testimonial slides found!');
+                }
+            });
+        </script>
     </section>
     
     <!-- Timeline Section -->
@@ -1205,81 +1515,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- Streamlined Testimonials Section -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>How I Work and What I Bring to the Table</h2>
-                <p>Real results from enterprise product management and stakeholder collaboration</p>
-            </div>
-            
-            <!-- Clean 4-Card Testimonials Grid -->
-            <div class="testimonials-grid">
-                <div class="testimonial-card locus-card" data-aos="fade-up">
-                    <div class="card-badge">CUSTOMER-CENTRIC LEADERSHIP</div>
-                    <div class="company-badge locus">Locus Technologies</div>
-                    <h4>Stakeholder Presentation & Product Demo</h4>
-                    <div class="testimonial-quote">
-                        <p>"Min did an <strong>outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong>made Locus look very good</strong>."</p>
-                        <cite>— Marian Carr, Senior Manager</cite>
-                    </div>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Executive Communication</span>
-                        <span class="skill-tag">Product Presentation</span>
-                        <span class="skill-tag">Client Relations</span>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card ul-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-badge">DATA-DRIVEN STRATEGY</div>
-                    <div class="company-badge ul">UL Solutions</div>
-                    <h4>VP-Level Product Strategy & Planning</h4>
-                    <div class="testimonial-quote">
-                        <p>"Min presented strategic insights and asked <strong>compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong>prioritize high-impact initiatives</strong> for maximum business value."</p>
-                        <cite>— VP Product Strategy Session</cite>
-                    </div>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Executive Communication</span>
-                        <span class="skill-tag">Strategic Planning</span>
-                        <span class="skill-tag">Product Roadmapping</span>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card locus-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-badge">HANDS-ON BUILDER</div>
-                    <div class="company-badge locus">Locus Technologies</div>
-                    <h4>On-Demand Customer Solution Development</h4>
-                    <div class="testimonial-quote">
-                        <p>"During our onsite training, Min <strong>quickly built a demo dashboard</strong> that was remarkably close to our specific requirements. Her ability to <strong>rapidly translate our needs into a working solution</strong> was impressive."</p>
-                        <cite>— Key Customer</cite>
-                    </div>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Rapid Prototyping</span>
-                        <span class="skill-tag">Customer-Centric Development</span>
-                        <span class="skill-tag">Technical Agility</span>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card locus-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-badge">CUSTOMER SUCCESS FOCUS</div>
-                    <div class="company-badge locus">Locus Technologies</div>
-                    <h4>Product Delivery Excellence</h4>
-                    <div class="testimonial-quote">
-                        <p>"Thanks so much for <strong>pushing this through and helping the customer out</strong>. They will no doubt appreciate your efforts."</p>
-                        <cite>— Jennifer Peterson, Project Manager</cite>
-                    </div>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Customer Advocacy</span>
-                        <span class="skill-tag">Solution Delivery</span>
-                        <span class="skill-tag">Problem Solving</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-   <!-- STEP 1: Replace your existing Featured Work section in index.html -->
 
 <!-- Updated Featured Work Section with Individual Project Links -->
 <section id="projects" class="section projects-section">
@@ -1419,6 +1654,7 @@
         </div>
     </div>
 </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
