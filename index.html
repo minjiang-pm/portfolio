@@ -1092,6 +1092,28 @@
             .impact-metrics {
                 gap: 25px;
             }
+            
+            /* Story Section Mobile Styles */
+            #story .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            #story > .container > div > div {
+                padding: 30px 20px !important;
+            }
+            
+            #story h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            #story p {
+                font-size: 1rem !important;
+                margin-left: 0 !important;
+            }
+            
+            #story > .container > div > div > div > div > div {
+                grid-template-columns: 1fr !important;
+            }
         }
 
 .project-container {
@@ -1111,7 +1133,7 @@
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#testimonials">Impact</a></li>
-                    <li><a href="#timeline">My Story</a></li>
+                    <li><a href="#story">My Story</a></li>
                     <li><a href="#projects">Portfolio</a></li>
                     <li><a href="#contact" class="cta-button">Let's chat</a></li>
                 </ul>
@@ -1436,6 +1458,115 @@
                 console.log('Carousel started');
             })();
         </script>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section id="story" class="section" style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f3e8ff 100%); padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Carbon Journey</h2>
+                <p style="font-size: 1.1rem; color: var(--secondary); max-width: 800px; margin: 0 auto;">From measuring emissions at a heating plant to building enterprise carbon data platforms</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Story Card -->
+                <div style="background: white; border-radius: 16px; padding: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden;">
+                    
+                    <!-- Decorative Element -->
+                    <div style="position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(126, 34, 206, 0.05) 0%, transparent 70%); border-radius: 50%;"></div>
+                    
+                    <!-- Story Content -->
+                    <div style="position: relative; z-index: 1;">
+                        
+                        <!-- Chapter 1: The Beginning -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-seedling" style="color: white; font-size: 1.3rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Where It All Started</h3>
+                            </div>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-left: 65px;">
+                                It all started with a <strong style="color: var(--dark);">GHG reduction project</strong> — working hands-on at a central heating plant where I helped optimize operations to reduce emissions. We used lime scrubbers to capture pollutants, and I analyzed how different operating levels affected air quality performance. That experience taught me how <strong style="color: var(--primary);">data, systems, and teamwork</strong> can drive real environmental impact.
+                            </p>
+                        </div>
+
+                        <!-- Chapter 2: Research Foundation -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #2563eb); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-flask" style="color: white; font-size: 1.3rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Building Technical Depth</h3>
+                            </div>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-left: 65px;">
+                                Around the same time, I conducted <strong style="color: var(--dark);">atmospheric chemistry research</strong> focused on ozone and hydroxyl radicals, which deepened my understanding of how microscopic chemical reactions can influence large-scale climate systems. It gave me a strong foundation in <strong style="color: var(--primary);">connecting technical analysis with environmental outcomes</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Chapter 3: Public Service -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #7e22ce, #a855f7); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-users-cog" style="color: white; font-size: 1.3rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Scaling Through Collaboration</h3>
+                            </div>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-left: 65px;">
+                                I then moved into public service, working for the <strong style="color: var(--dark);">City of San Diego</strong> and the <strong style="color: var(--dark);">Bay Area Air Quality Management District</strong>. There, I managed air quality permitting and compliance programs — coordinating across engineers, industries, and regulators to align technical operations with policy and sustainability goals. It strengthened my ability to <strong style="color: var(--primary);">lead cross-functional collaboration</strong> and deliver measurable results within complex systems.
+                            </p>
+                        </div>
+
+                        <!-- Chapter 4: Private Sector Impact -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #d97706); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-rocket" style="color: white; font-size: 1.3rem;"></i>
+                                </div>
+                                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Technology-Driven Scale</h3>
+                            </div>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-left: 65px;">
+                                I transitioned into the private sector to <strong style="color: var(--dark);">scale my impact through technology</strong>. At <strong style="color: #10b981;">Locus Technologies</strong>, I led programs and product initiatives that helped enterprises track and reduce their greenhouse gas emissions using software solutions. Now at <strong style="color: #3b82f6;">UL Solutions</strong>, I manage sustainability and learning platforms that support Fortune 100 clients in achieving their compliance, safety, and environmental goals.
+                            </p>
+                        </div>
+
+                        <!-- The Common Thread -->
+                        <div style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(168, 85, 247, 0.05)); border-left: 4px solid var(--primary); border-radius: 8px; padding: 30px; margin-top: 50px;">
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div style="flex-shrink: 0;">
+                                    <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary); opacity: 0.3;"></i>
+                                </div>
+                                <div>
+                                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--dark); font-style: italic; margin: 0;">
+                                        Across all of these experiences, the common thread has been <strong style="color: var(--primary);">bridging science, regulation, and technology</strong> — bringing people and systems together to solve complex sustainability challenges through data-driven solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Capabilities from Journey -->
+                        <div style="margin-top: 40px;">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 20px; text-align: center;">What This Journey Taught Me</h4>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                <div style="text-align: center; padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                                    <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #10b981; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">Data-Driven Decision Making</p>
+                                </div>
+                                <div style="text-align: center; padding: 20px; background: #eff6ff; border-radius: 8px;">
+                                    <i class="fas fa-users" style="font-size: 1.8rem; color: #3b82f6; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">Cross-Functional Leadership</p>
+                                </div>
+                                <div style="text-align: center; padding: 20px; background: #f5f3ff; border-radius: 8px;">
+                                    <i class="fas fa-code-branch" style="font-size: 1.8rem; color: #7e22ce; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">Tech + Science Integration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- Timeline Section -->
