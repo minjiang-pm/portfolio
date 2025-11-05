@@ -3,7 +3,7 @@
   <rect width="1200" height="650" fill="#f8f9fa"/>
   
   <!-- Title -->
-  <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">My Professional Journey: From Environmental Science to Product Management</text>
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">My Professional Journey: From Environmental Science to Technical Program Management</text>
   
   <!-- Main Timeline Line -->
   <path d="M 120 320 C 200 220, 300 420, 360 320 C 420 220, 540 420, 600 320 C 660 220, 780 420, 840 320 C 900 220, 1020 420, 1080 320" stroke="#3498db" stroke-width="4" fill="none"/>
@@ -29,12 +29,13 @@
   <text x="360" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">2016-2017</text>
   
   <!-- Node Details Box 2 -->
-  <rect x="260" y="400" width="200" height="120" rx="10" fill="white" stroke="#e74c3c" stroke-width="2"/>
-  <text x="360" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Technical Coordinator</text>
+  <rect x="260" y="400" width="200" height="135" rx="10" fill="white" stroke="#e74c3c" stroke-width="2"/>
+  <text x="360" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Air Quality Engineer</text>
   <text x="360" y="440" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">City of San Diego</text>
-  <text x="270" y="460" font-family="Arial, sans-serif" font-size="11" fill="#555">• EHS software implementation</text>
-  <text x="270" y="480" font-family="Arial, sans-serif" font-size="11" fill="#555">• 85% user adoption achievement</text>
-  <text x="270" y="500" font-family="Arial, sans-serif" font-size="11" fill="#555">• Stakeholder consensus building</text>
+  <text x="360" y="455" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">Public Utilities Department</text>
+  <text x="270" y="480" font-family="Arial, sans-serif" font-size="11" fill="#555">• EHS software implementation</text>
+  <text x="270" y="500" font-family="Arial, sans-serif" font-size="11" fill="#555">• 85% user adoption achievement</text>
+  <text x="270" y="520" font-family="Arial, sans-serif" font-size="11" fill="#555">• Stakeholder consensus building</text>
   
   <line x1="360" y1="340" x2="360" y2="400" stroke="#e74c3c" stroke-width="2"/>
   
@@ -43,14 +44,15 @@
   <text x="600" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">2017-2022</text>
   
   <!-- Node Details Box 3 -->
-  <rect x="480" y="140" width="240" height="150" rx="10" fill="white" stroke="#f39c12" stroke-width="2"/>
-  <text x="600" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Product Manager &amp; Engineer</text>
+  <rect x="480" y="140" width="240" height="165" rx="10" fill="white" stroke="#f39c12" stroke-width="2"/>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Technical PM &amp; Engineer</text>
   <text x="600" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Locus Technologies</text>
-  <text x="490" y="200" font-family="Arial, sans-serif" font-size="11" fill="#555">• 27% growth in contracts</text>
-  <text x="490" y="220" font-family="Arial, sans-serif" font-size="11" fill="#555">• $1.2M in new revenue</text>
-  <text x="490" y="240" font-family="Arial, sans-serif" font-size="11" fill="#555">• 30+ dashboards via SQL/AnyChart</text>
-  <text x="490" y="260" font-family="Arial, sans-serif" font-size="11" fill="#555">• 91% CSAT score</text>
-  <text x="490" y="280" font-family="Arial, sans-serif" font-size="11" fill="#555">• 100% customer renewal rate</text>
+  <text x="600" y="195" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">Silicon Valley ESG SaaS Pioneer</text>
+  <text x="490" y="215" font-family="Arial, sans-serif" font-size="11" fill="#555">• 27% growth in contracts</text>
+  <text x="490" y="235" font-family="Arial, sans-serif" font-size="11" fill="#555">• $1.2M in new revenue</text>
+  <text x="490" y="255" font-family="Arial, sans-serif" font-size="11" fill="#555">• 30+ dashboards via SQL/AnyChart</text>
+  <text x="490" y="275" font-family="Arial, sans-serif" font-size="11" fill="#555">• 91% CSAT score</text>
+  <text x="490" y="295" font-family="Arial, sans-serif" font-size="11" fill="#555">• 100% customer renewal rate</text>
   
   <line x1="600" y1="300" x2="600" y2="290" stroke="#f39c12" stroke-width="2"/>
   
@@ -74,14 +76,15 @@
   <text x="1080" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">2022-Present</text>
   
   <!-- Node Details Box 5 -->
-  <rect x="960" y="140" width="220" height="150" rx="10" fill="white" stroke="#3498db" stroke-width="2"/>
-  <text x="1070" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Software Product Manager</text>
+  <rect x="960" y="140" width="220" height="165" rx="10" fill="white" stroke="#3498db" stroke-width="2"/>
+  <text x="1070" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Technical Program Manager</text>
   <text x="1070" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">UL Solutions</text>
-  <text x="970" y="200" font-family="Arial, sans-serif" font-size="11" fill="#555">• 15% revenue growth</text>
-  <text x="970" y="220" font-family="Arial, sans-serif" font-size="11" fill="#555">• 58+ customer interviews</text>
-  <text x="970" y="240" font-family="Arial, sans-serif" font-size="11" fill="#555">• 41 weeks timeline reduction</text>
-  <text x="970" y="260" font-family="Arial, sans-serif" font-size="11" fill="#555">• 18% increase in advocacy</text>
-  <text x="970" y="280" font-family="Arial, sans-serif" font-size="11" fill="#555">• 30% improved dev efficiency</text>
+  <text x="1070" y="195" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">Global Safety Science Leader</text>
+  <text x="970" y="215" font-family="Arial, sans-serif" font-size="11" fill="#555">• 15% revenue growth</text>
+  <text x="970" y="235" font-family="Arial, sans-serif" font-size="11" fill="#555">• 58+ customer interviews</text>
+  <text x="970" y="255" font-family="Arial, sans-serif" font-size="11" fill="#555">• 41 weeks timeline reduction</text>
+  <text x="970" y="275" font-family="Arial, sans-serif" font-size="11" fill="#555">• 18% increase in advocacy</text>
+  <text x="970" y="295" font-family="Arial, sans-serif" font-size="11" fill="#555">• 30% improved dev efficiency</text>
   
   <line x1="1080" y1="300" x2="1070" y2="290" stroke="#3498db" stroke-width="2"/>
   
@@ -101,7 +104,7 @@
   <!-- Key Inflection Points -->
   <path d="M 360 380 L 360 390 L 400 390" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
   <rect x="400" y="375" width="180" height="30" rx="5" fill="#e74c3c" opacity="0.8"/>
-  <text x="490" y="395" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">TRANSITION TO PRODUCT</text>
+  <text x="490" y="395" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">TRANSITION TO TECH PM</text>
   
   <path d="M 1080 380 L 1080 390 L 1030 390" stroke="#3498db" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
   <rect x="850" y="375" width="180" height="30" rx="5" fill="#3498db" opacity="0.8"/>
